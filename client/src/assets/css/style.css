@@ -8024,11 +8024,11 @@ h1, h2, h3, h4, h5,
   font-weight: 400; }
 
 .wrap {
-  background: #0f7fd9;
+  background: #ffc107;
   padding: 0; }
   .wrap .phone {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.8); }
+    color: rgba(0, 0, 0, 0.9); }
     .wrap .phone a {
       color: white;
       font-size: 12px; }
@@ -8661,7 +8661,7 @@ h1, h2, h3, h4, h5,
 .time-open-wrap {
   border-radius: 5px;
   padding: 0;
-  background: #2b98f0;
+  background: #111111;
   overflow: hidden;
   -webkit-box-shadow: 0px 12px 48px -16px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 0px 12px 48px -16px rgba(0, 0, 0, 0.29);

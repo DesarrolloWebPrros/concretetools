@@ -7,8 +7,8 @@ import { AboutComponent } from './Components/shared/about/about.component';
 import { HomeComponent } from './Components/shared/home/home.component';
 import { MainComponent } from './Components/layouts/main/main.component';
 import { FooterComponent } from './Components/shared/footer/footer.component';
-import { ProductosComponent } from './Components/shared/productos/productos.component';
-import { PromocionesComponent } from './Components/shared/promociones/promociones.component';
+import { ProductosComponent } from './Components/moduloProductos/productos/productos.component';
+import { PromocionesComponent } from './Components/moduloPromociones/promociones/promociones.component';
 import { DistribuidoresComponent } from './Components/shared/distribuidores/distribuidores.component';
 import { ContactComponent } from './Components/shared/contact/contact.component';
 
