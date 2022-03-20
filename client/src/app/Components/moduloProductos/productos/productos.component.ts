@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() { }
+  Productos: any;
+
+  constructor(private Rest: RestService) { }
 
   ngOnInit(): void {
+    this.getProductos();
+  }
+
+  getProductos = () => {
+    this.Rest.get(`http://localhost:3768/api/productos`).subscribe((respuesta:any) => {
+      this.Productos = respuesta.Productos;
+      console.log(`Productos =>>>`,respuesta);
+    });
+    
   }
 
 }
