@@ -11,6 +11,7 @@
       </div>
     </div>
   </div>
+  <br>
   <div class="container overflow-auto" style="height: 650px;">
 
       <div class="row justify-content-md-center ">
@@ -22,8 +23,8 @@
                   <h5 class="card-title text-warning">{{ producto.Precio }}</h5>
                   <p class="card-text">{{ producto.Descripcion }}.</p>
                   <ul class="list-group" >
-                      <li class="list-group-item list-group-item-warning" >Caracteristicas</li>
-                      <li *ngFor="let item of producto.Descripcion" class="list-group-item list-group-item-dark "> {{ item }} </li>
+                      <li class="list-group-item text-light bg-dark " >Caracteristicas</li>
+                      <li *ngFor="let item of producto.Descripcion" class="list-group-item text-light bg-dark"> {{ item }} </li>
                   </ul>
                 </div>
               </div>
