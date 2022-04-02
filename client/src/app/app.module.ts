@@ -12,6 +12,7 @@ import { ProductosComponent } from './Components/moduloProductos/productos/produ
 import { PromocionesComponent } from './Components/moduloPromociones/promociones/promociones.component';
 import { DistribuidoresComponent } from './Components/shared/distribuidores/distribuidores.component';
 import { ContactComponent } from './Components/shared/contact/contact.component';
+import { CreateProductoComponent } from './Components/moduloProductos/create-producto/create-producto.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactComponent } from './Components/shared/contact/contact.component'
     ProductosComponent,
     PromocionesComponent,
     DistribuidoresComponent,
-    ContactComponent
+    ContactComponent,
+    CreateProductoComponent
   ],
   imports: [
     BrowserModule,

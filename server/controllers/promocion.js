@@ -11,6 +11,10 @@ const index = (req, res) => {
             if (!promociones) {
                 res.status(404).send({message: 'No se encontro ningun promoción'});
             } else {
+                promociones.filter(p => {
+                    p.Inicio = new Date(p.Inicio ).getTime();
+                    p.Fin = new Date(p.Fin ).getTime();
+                });
                 res.status(200).send({Promociones: promociones});
             }
         }

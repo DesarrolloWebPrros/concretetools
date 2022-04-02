@@ -8433,7 +8433,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    background: #0f7fd9;
+    background: #ffc107;
     opacity: .7;
     z-index: -1; }
   .ftco-intro h2 {
