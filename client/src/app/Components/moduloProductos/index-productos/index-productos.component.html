@@ -1,0 +1,45 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container justify-content-md-center">
+      <h1 class="display-4">Productos</h1>
+      <p class="lead">Gestión de productos</p>
+      <button type="button" (click)="newProducto()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
+        {{ !modalCreate ? 'Crear Producto' : 'Descartar'}}
+      </button>
+      <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
+    </div>
+</div>
+<app-create-producto *ngIf="modalCreate">
+</app-create-producto>
+<div class="container overflow-auto"  style="height: 650px;">
+    <div class="row justify-content-md-center">
+        <table class="table table-hover" data-sticky-header="true">
+            <thead class="thead-dark" >
+              <tr >
+                <th scope="col">Clave</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Operaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+                <ng-container *ngFor="let producto of Productos">
+                    <tr>
+                      <th scope="row"> {{ producto.Clave }} </th>
+                      <td>{{ producto.Nombre }}</td>
+                      <td>{{ producto.Descripcion }}</td>
+                      <td>{{ producto.Precio }}</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" (click)="edit(producto._id)" class="btn btn-primary">Editar</button>
+                            <button type="button" (click)="delete(producto._id)" class="btn btn-danger">Eliminar</button>
+                        </div>                          
+                    </td>
+                    </tr>
+                </ng-container>            
+    
+            </tbody>
+        </table>
+    </div>
+</div>

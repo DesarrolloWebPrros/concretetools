@@ -9,10 +9,11 @@ export interface Promociones {
 }
 
 export interface Producto {
-    Nombre:         String,
-    Clave:          String,
-    Descripcion:    String[],
-    Precio:         String,
-    Aplicaciones:   String[],
-    Imagen:         String
+    _id:           string,
+    Nombre:         string,
+    Clave:          string,
+    Descripcion:    string[],
+    Precio:         string,
+    Aplicaciones:   string[],
+    Imagen:         string
 }
