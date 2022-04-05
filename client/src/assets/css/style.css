@@ -8024,7 +8024,7 @@ h1, h2, h3, h4, h5,
   font-weight: 400; }
 
 .wrap {
-  background: #ffc107;
+  background: #fcec27;
   padding: 0; }
   .wrap .phone {
     font-size: 12px;
@@ -8433,7 +8433,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    background: #ffc107;
+    background: #f6fe42;
     opacity: .7;
     z-index: -1; }
   .ftco-intro h2 {

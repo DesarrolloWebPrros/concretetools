@@ -16,7 +16,7 @@
 
       <div class="row justify-content-md-center" >
           <div *ngFor="let producto of Productos" class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <div class="card text-warning bg-dark mb-3" style="max-width: 18rem; height: 50rem;">
+            <div class="card text-warning bg-dark mb-3" style="max-width: 18rem; ">
                 <div class="card-header text-white">{{ producto.Nombre }}</div>
                 <div class="card-body">
                   <div class="text-center">
@@ -25,10 +25,10 @@
                   <h5 class="card-title text-warning">{{ producto.Clave }}</h5>
                   <h5 class="card-title text-warning">{{ producto.Precio | currency : 'MXN' : 'symbol-narrow' : '1.2-2'}}</h5>
                   <p class="card-text">{{ producto.Descripcion }}.</p>
-                  <ul class="list-group" >
+                  <!-- <ul class="list-group" >
                       <li class="list-group-item text-light bg-dark font-weight-bold" >Caracteristicas</li>
                       <li *ngFor="let item of producto.Descripcion" class="list-group-item text-light bg-dark"> {{ item }} </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
           </div>
