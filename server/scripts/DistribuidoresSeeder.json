@@ -1,19 +1,142 @@
 [{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V.",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "DISTRIBUIDORA ARGMONS S.A. DE C.V.",
+    "Clave" : "Dist002",
+    "Telefono" : "7717193839",
+    "email": "compras@argmons.com.mx",
+    "Direccion":"BOULEVAR RAMON G. BONFIL No. 312 COL. PLUTARCO ELIAS CALLES C.P. 4035 PACHUCA HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "JVRENTA",
+    "Clave" : "Dist003",
+    "Telefono" : "7717100346",
+    "email": "jvrenta_servicios@hotmail.com",
+    "Direccion":"CARR. PACHUCA ACTOPAN KM 6.5, S/N, LA LOMA, 13052, PACHUCA, SAN AGUSTIN TLAXIACA, HIDALGO, MEXICO.",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "ESTAMPADOS EN CONCRETO HIDALGO ROTEC PACHUCA",
+    "Clave" : "Dist004",
+    "Telefono" : "7712540616",
+    "email": "mhac_edifica@hotmail.com",
+    "Direccion":"BOULEVAR RAMON G. BONFIL, JOSE ANTONIO TELLERIA BELTLAN 76, COL. SAN PEDRO NOPALCALCO, 42084, HIDALGO MEXICO",
+    "Region":"CENTRO"
+},{
+    "Nombre" : "MATERIALES SAN ANTONIO",
+    "Clave" : "Dist005",
+    "Telefono" : "7717110732",
+    "email": "email@email.com",
+    "Direccion":"CARRETERA MEXICO PACHUCA KM 81.5, COLONIA SAN ANTONIO DEL DESMONTE, 42111 PACHUCA DE SOTO, HIDALGO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "CERON HERRAMIENTAS DE HIDALGO SA DE CV",
+    "Clave" : "Dist006",
+    "Telefono" : "7737322483 & 7731002783",
+    "email": "ceronhta@prodigy.net.mx",
+    "Direccion":" CARRETERA TULA ACTOPAN 7, COL. CENTRO, 42800, TULA DE ALLENDE, HIDALGO, MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "HERCAVSA",
+    "Clave" : "Dist007",
+    "Telefono" : "7714281551",
+    "email": "hercavsa@gmail.com",
+    "Direccion":"BLVD. FELIPE ANGELES 2014, COL.CARLOS ROVIROSA, 42082, PACHUCA, HIDALGO, MEXICO",
+    "Región":"CENTRO"
+},{
     "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
     "Clave" : "Dist001",
     "Telefono" : "7711470497",
     "email": "gpo.anglo@gmail.com",
     "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
-    "Razon_Social":"Grupo Ferretero Angsa S A P I de C.V.",
-    "RFC":"GFA150330DVA",
-    "USO_CDFI":"G01 - Adquisición de mercancias"
-    },{
-        "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
-        "Clave" : "Dist001",
-        "Telefono" : "7711470497",
-        "email": "gpo.anglo@gmail.com",
-        "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
-        "Razon_Social":"Grupo Ferretero Angsa S A P I de C.V.",
-        "RFC":"GFA150330DVA",
-        "USO_CDFI":"G01 - Adquisición de mercancias"
-    }
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+},{
+    "Nombre" : "Grupo Ferretero Angsa S A P I de C.V. ",
+    "Clave" : "Dist001",
+    "Telefono" : "7711470497",
+    "email": "gpo.anglo@gmail.com",
+    "Direccion":"CALLE NEVADO DE COLIMA, 102, SAN CAYETANO, 13048, PACHUCA DE SOTO, HIDALGO MEXICO",
+    "Región":"CENTRO"
+}
+]
