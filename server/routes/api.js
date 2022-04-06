@@ -3,6 +3,7 @@
 let express = require('express');
 let ProductoController = require('../controllers/producto');
 let PromocionController = require('../controllers/promocion');
+let DistribuidorController = require('../controllers/distribuidor');
 let api = express.Router();
 
 api.get('/productos', ProductoController.index);
@@ -14,5 +15,10 @@ api.get('/promociones', PromocionController.index);
 api.get('/producto/:id', PromocionController.show);
 api.post('/producto', PromocionController.save);
 api.put('/productos/:id', PromocionController.update);
+
+api.get('/distribuidores', DistribuidorController.index);
+api.get('/distribuidor/:id', DistribuidorController.show);
+api.post('/distribuidor', DistribuidorController.save);
+api.put('/distribuidores/:id', DistribuidorController.update);
 
 module.exports = api;
