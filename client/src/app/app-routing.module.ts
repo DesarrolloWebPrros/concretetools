@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './Components/shared/about/about.component';
-import { DistribuidoresComponent } from './Components/shared/distribuidores/distribuidores.component';
+import { DistribuidoresComponent } from './Components/moduloDistribuidores/distribuidores/distribuidores.component';
 import { HomeComponent } from './Components/shared/home/home.component';
 import { ProductosComponent } from './Components/moduloProductos/productos/productos.component';
 import { PromocionesComponent } from './Components/moduloPromociones/promociones/promociones.component';

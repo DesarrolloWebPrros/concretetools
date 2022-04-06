@@ -10,7 +10,7 @@ import { MainComponent } from './Components/layouts/main/main.component';
 import { FooterComponent } from './Components/shared/footer/footer.component';
 import { ProductosComponent } from './Components/moduloProductos/productos/productos.component';
 import { PromocionesComponent } from './Components/moduloPromociones/promociones/promociones.component';
-import { DistribuidoresComponent } from './Components/shared/distribuidores/distribuidores.component';
+import { DistribuidoresComponent } from './Components/moduloDistribuidores/distribuidores/distribuidores.component';
 import { ContactComponent } from './Components/shared/contact/contact.component';
 import { CreateProductoComponent } from './Components/moduloProductos/create-producto/create-producto.component';
 import { IndexProductosComponent } from './Components/moduloProductos/index-productos/index-productos.component';

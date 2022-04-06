@@ -2,7 +2,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-const PromocionSchema = Schema({
+const DistribuidorSchema = Schema({
     _id:            String,
     Nombre:         String,
     Clave:          String,
@@ -12,4 +12,4 @@ const PromocionSchema = Schema({
     Region:         String
 });
 
-module.exports = mongoose.model('Distribucion',DistribucionSchema, 'Distribuidores');
+module.exports = mongoose.model('Distribuidor',DistribuidorSchema, 'Distribuidores');

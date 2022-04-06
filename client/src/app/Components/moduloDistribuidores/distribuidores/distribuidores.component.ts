@@ -7,6 +7,7 @@ import { RestService } from 'src/app/services/rest.service';
   styleUrls: ['./distribuidores.component.css']
 })
 export class DistribuidoresComponent implements OnInit {
+  Distribuidores: any;
 
   constructor(private Rest: RestService) { }
 

@@ -15,7 +15,7 @@
 <div class="container overflow-auto" style="height: 650px; ">
 
     <div class="row justify-content-md-center" >
-        <div *ngFor="let producto of Productos" class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div *ngFor="let distribuidor of Distribuidores" class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="card text-warning bg-dark mb-3" style="max-width: 18rem; ">
                 <div class="card-header text-white">{{ distribuidor.Nombre }}</div>
                 <div class="card-body">
@@ -24,7 +24,7 @@
                   </div>
                   <h5 class="card-title text-warning">{{ distribuidor.email }}</h5>
                   <h5 class="card-title text-warning">{{ distribuidor.Telefono }}</h5>
-                  <p class="card-text">{{ distribuidor.Domicilio }}.</p>
+                  <p class="card-text">{{ distribuidor.Direccion }}.</p>
                   <!-- <ul class="list-group" >
                       <li class="list-group-item text-light bg-dark font-weight-bold" >Caracteristicas</li>
                       <li *ngFor="let item of producto.Descripcion" class="list-group-item text-light bg-dark"> {{ item }} </li>
