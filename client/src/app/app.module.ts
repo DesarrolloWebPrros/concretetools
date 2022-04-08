@@ -14,6 +14,7 @@ import { DistribuidoresComponent } from './Components/moduloDistribuidores/distr
 import { ContactComponent } from './Components/shared/contact/contact.component';
 import { CreateProductoComponent } from './Components/moduloProductos/create-producto/create-producto.component';
 import { IndexProductosComponent } from './Components/moduloProductos/index-productos/index-productos.component';
+import { ProductoComponent } from './Components/moduloProductos/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { IndexProductosComponent } from './Components/moduloProductos/index-prod
     DistribuidoresComponent,
     ContactComponent,
     CreateProductoComponent,
-    IndexProductosComponent
+    IndexProductosComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,

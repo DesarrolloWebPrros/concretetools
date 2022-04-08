@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from 'src/app/services/rest.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ProductosComponent implements OnInit {
 
   Productos: any;
 
-  constructor(private Rest: RestService) { }
+  constructor(private Rest: RestService, private _router:Router) { }
 
   ngOnInit(): void {
     this.getProductos();
@@ -20,8 +21,11 @@ export class ProductosComponent implements OnInit {
     this.Rest.get(`http://localhost:3768/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
       console.log(`Productos =>>>`,respuesta);
-    });
-    
+    });    
+  }
+
+  openProducto = (id:string) => {
+    this._router.navigate( ['/producto', id]);
   }
 
 }

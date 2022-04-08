@@ -12,23 +12,19 @@
     </div>
 </div>
 <br>
-<div class="container overflow-auto" style="height: 650px; ">
+<div class="overflow-auto" style="height: 650px; ">
 
-    <div class="row justify-content-md-center" >
-        <div *ngFor="let distribuidor of Distribuidores" class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <div class="card text-warning bg-dark mb-3" style="max-width: 18rem; ">
-                <div class="card-header text-white">{{ distribuidor.Nombre }}</div>
+    <div class="row  mx-auto justify-content-md-center" >
+        <div *ngFor="let distribuidor of Distribuidores" class="col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+            <div class="tarjeta mb-3" >
+                <div class="card-header text-dark">{{ distribuidor.Nombre }}</div>
                 <div class="card-body">
                   <div class="text-center">
                     <img src="{{ 'assets/Distribuidores/'+ distribuidor.Clave +'.png' }}" class="rounded" style="width: 100px;" alt="{{ distribuidor.Nombre }}">
                   </div>
-                  <h5 class="card-title text-warning">{{ distribuidor.email }}</h5>
-                  <h5 class="card-title text-warning">{{ distribuidor.Telefono }}</h5>
+                  <h5 class="card-title text-dark ">{{ distribuidor.email }}</h5>
+                  <h5 class="card-title text-dark">{{ distribuidor.Telefono }}</h5>
                   <p class="card-text">{{ distribuidor.Direccion }}.</p>
-                  <!-- <ul class="list-group" >
-                      <li class="list-group-item text-light bg-dark font-weight-bold" >Caracteristicas</li>
-                      <li *ngFor="let item of producto.Descripcion" class="list-group-item text-light bg-dark"> {{ item }} </li>
-                  </ul> -->
                 </div>
             </div>
         </div>
