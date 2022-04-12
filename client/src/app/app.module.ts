@@ -15,6 +15,10 @@ import { ContactComponent } from './Components/shared/contact/contact.component'
 import { CreateProductoComponent } from './Components/moduloProductos/create-producto/create-producto.component';
 import { IndexProductosComponent } from './Components/moduloProductos/index-productos/index-productos.component';
 import { ProductoComponent } from './Components/moduloProductos/producto/producto.component';
+import { IndexPromocionesComponent } from './Components/moduloPromociones/index-promociones/index-promociones.component';
+import { CreatePromocionComponent } from './Components/moduloPromociones/create-promocion/create-promocion.component';
+import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
+import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ProductoComponent } from './Components/moduloProductos/producto/product
     ContactComponent,
     CreateProductoComponent,
     IndexProductosComponent,
-    ProductoComponent
+    ProductoComponent,
+    IndexPromocionesComponent,
+    CreatePromocionComponent,
+    CreateDistribuidorComponent,
+    IndexDistribuidoresComponent
   ],
   imports: [
     BrowserModule,

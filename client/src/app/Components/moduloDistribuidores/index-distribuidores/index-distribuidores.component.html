@@ -1,0 +1,49 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container justify-content-md-center">
+      <br>
+      <br>
+      <br>
+      <h1 class="display-4">Distribuidores</h1>
+      <p class="lead">Gestión de distribuidores</p>
+      <button type="button" (click)="newProducto()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
+        {{ !modalCreate ? 'Crear Distribuidores' : 'Descartar'}}
+      </button>
+      <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
+    </div>
+</div>
+<app-create-distribuidor *ngIf="modalCreate">
+</app-create-distribuidor>
+<div class="container overflow-auto"  style="height: 650px;">
+    <div class="row justify-content-md-center">
+        <table class="table table-hover" data-sticky-header="true">
+            <thead class="thead-dark" >
+              <tr >
+                <th scope="col">Clave</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">e-Mail</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Región</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+                <ng-container *ngFor="let distribuidor of Distribuidores">
+                    <tr>
+                        <th scope="row"> {{ distribuidor.Clave }} </th>
+                        <td>{{ distribuidor.Nombre }}</td>
+                      <td>{{ distribuidor.Descripcion }}</td>
+                      <td>{{ distribuidor.Precio }}</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" (click)="edit(distribuidor._id)" class="btn btn-primary">Editar</button>
+                            <button type="button" (click)="delete(distribuidor._id)" class="btn btn-danger">Eliminar</button>
+                        </div>                          
+                    </td>
+                    </tr>
+                </ng-container>            
+    
+            </tbody>
+        </table>
+    </div>
+</div>
