@@ -5,14 +5,12 @@
       <br>
       <h1 class="display-4">Productos</h1>
       <p class="lead">Gestión de productos</p>
-      <button type="button" (click)="newProducto()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
-        {{ !modalCreate ? 'Crear Producto' : 'Descartar'}}
+      <button type="button" (click)="newProducto()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">
+        Crear Producto
       </button>
       <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
     </div>
 </div>
-<app-create-producto *ngIf="modalCreate">
-</app-create-producto>
 <div class="container overflow-auto"  style="height: 650px;">
     <div class="row justify-content-md-center">
         <table class="table table-hover" data-sticky-header="true">

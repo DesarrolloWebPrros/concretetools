@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from 'src/app/services/rest.service';
 import { Producto } from '../../interfaces/Prototipos';
 
@@ -12,7 +13,7 @@ export class IndexProductosComponent implements OnInit {
   Productos: Producto[]=[];
   modalCreate:boolean = false;
 
-  constructor(private Rest: RestService) { }
+  constructor(private Rest: RestService, private router: Router) { }
 
   ngOnInit(): void {
     this.getProductos();
@@ -24,14 +25,9 @@ export class IndexProductosComponent implements OnInit {
       console.log(`Productos =>>>`,respuesta);
     });
   }
-
-  openModalCreate = () => {
-    this.modalCreate = !this.modalCreate;
-  }
   newProducto = ()=>{
-    this.openModalCreate();
-    console.log(`abrio`, this.modalCreate);
-    
+    this.router.navigate(['create-producto']);
+   
   }
 
   edit = (id:string) => {

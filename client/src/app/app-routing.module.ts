@@ -24,6 +24,8 @@ const routes: Routes = [
   { path: 'about'                         , pathMatch: 'full',  component: AboutComponent               },
   { path: 'home'                          , pathMatch: 'full',  component: HomeComponent                },
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                         },
+  // Rutas para operaciones
+  { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent                }
 ];
 
 @NgModule({
