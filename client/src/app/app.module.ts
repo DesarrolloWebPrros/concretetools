@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './Components/shared/about/about.component';
 import { HomeComponent } from './Components/shared/home/home.component';
 import { MainComponent } from './Components/layouts/main/main.component';
@@ -46,7 +45,8 @@ import { EditProductoComponent } from './Components/moduloProductos/edit-product
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

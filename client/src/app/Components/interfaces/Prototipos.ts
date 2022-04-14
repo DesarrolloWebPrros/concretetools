@@ -9,12 +9,12 @@ export interface Promocion {
 }
 
 export interface Producto {
-    _id:           string,
+    _id?:           string,
     Nombre:         string,
     Clave:          string,
-    Descripcion:    string[],
+    Descripcion:    string[] | string,
     Precio:         number,
-    Aplicaciones:   string[],
+    Aplicaciones:   string[] | string,
     Imagen?:         string
 }
 export interface Distribuidor {

@@ -44,7 +44,7 @@ const save = (req, res) => {
     producto.Precio = params.precio;
     producto.Aplicaciones = params.aplicaciones;
     producto.Imagen = params.imagen;
-
+    console.log(params, producto);
     producto.save( (err, productoStored ) => {
         if (err) {
             res.status(500).send({message: `Error al guardar Producto ${params.nombre}`});            

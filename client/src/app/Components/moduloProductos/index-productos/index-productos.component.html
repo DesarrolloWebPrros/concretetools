@@ -33,8 +33,10 @@
                       <td>{{ producto.Precio }}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" (click)="edit(producto._id)" class="btn btn-primary">Editar</button>
-                            <button type="button" (click)="delete(producto._id)" class="btn btn-danger">Eliminar</button>
+                          <ng-container *ngIf="producto._id">
+                              <button type="button" (click)="edit(producto._id)" class="btn btn-primary">Editar</button>
+                              <button type="button" (click)="delete(producto._id)" class="btn btn-danger">Eliminar</button>
+                          </ng-container>
                         </div>                          
                     </td>
                     </tr>

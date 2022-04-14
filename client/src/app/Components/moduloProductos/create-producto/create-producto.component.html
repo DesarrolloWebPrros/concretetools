@@ -4,10 +4,8 @@
   <h3 style="text-align: center;">Crear producto</h3>
 </div>
 <div class="container">
+
   <div class="row">
-      <a style="padding-bottom: 2%;" href="admin-productos">
-        <button class="btn btn-secondary">Volver</button>                  
-      </a>
         <!-- <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
@@ -19,47 +17,56 @@
               <option value="3">Three</option>
             </select>
         </div> -->
-        <div class="input-group mb-3">
+        <form class="form-group row" style="width: 80%;" [formGroup]="myForm" (ngSubmit)="submit()">
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+              </div>
+              <input type="text" formControlName="Nombre" class="form-control" placeholder="Nombre del producto" aria-label="Nombre">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Clave</span>
+              </div>
+              <input type="text" formControlName="Nombre" class="form-control" placeholder="Clave" aria-label="Clave">
+          </div>
+          <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Nombre</span>
+              <span class="input-group-text" id="basic-addon1">Descripcion</span>
             </div>
-            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Nombre">
-        </div>
+            <input type="text" formControlName="Descripcion" class="form-control" placeholder="Descripcion" aria-label="descripcion">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Aplicaciones</span>
+            </div>
+            <input type="text" formControlName="Aplicaciones" class="form-control" placeholder="Aplicaciones" aria-label="aplicaciones">
+          </div>
 
-        <div class="input-group mb-3">
+          <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Clave</span>
+              <span class="input-group-text" id="basic-addon1">Precio</span>
             </div>
-            <input type="text" class="form-control" placeholder="Clave" aria-label="Clave">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Descripcion</span>
+            <input type="text" formControlName="Precio" class="form-control" placeholder="Precio" aria-label="precio">
           </div>
-          <input type="text" class="form-control" placeholder="Descripcion" aria-label="descripcion">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Aplicaciones</span>
+          <div class="input-group mb-3">   
+            <div class="custom-file">
+              <input type="file" (change)="onFileChange($event)"   formControlName="file" id="file" class="custom-file-input" id="validatedCustomFile" >
+              <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+
+                <div *ngIf="f.file.errors?.required">Archivo requerido.</div>
+    
+            </div>
+              <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>            
+            </div>           
           </div>
-          <input type="text" class="form-control" placeholder="Aplicaciones" aria-label="aplicaciones">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Precio</span>
+          <div class="input-group mb-3 ">
+            <a class="float" href="admin-productos">
+              <button class="btn btn-dark" >  Volver </button>            
+            </a>
+            <input class="btn btn-secondary" type="submit" value="Guardar">
           </div>
-          <input type="text" class="form-control" placeholder="Precio" aria-label="precio">
-        </div>
-        <div class="input-group mb-3">   
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="validatedCustomFile" >
-            <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>            
-          </div>       
-          
-        </div>
-        <div class="input-group mb-3">
-          <input class="btn btn-secondary" type="submit" value="Guardar">
-        </div>
+        </form>
     </div>
 </div>
 

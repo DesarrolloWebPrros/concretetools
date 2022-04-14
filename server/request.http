@@ -6,6 +6,6 @@ Content-Type: application/json
     "nombre": "Prueba de alta desde vscode",
     "clave":    "Sesta",
     "descripcion": ["esta bien vergas"],
-    "precio":       499.50
+    "precio":       499.50,
     "aplicaciones": ["una", "dos", "tres"]
 }
