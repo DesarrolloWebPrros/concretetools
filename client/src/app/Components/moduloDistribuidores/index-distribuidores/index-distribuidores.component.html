@@ -8,7 +8,7 @@
       <button type="button" (click)="newDistribuidor()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">
         Nuevo Distribuidor
       </button>
-      <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
+      <!-- <button type="button" (click)="newdistribuidor()" class="btn btn-success float-right">Nuevo</button> -->
     </div>
 </div>
 <app-create-distribuidor *ngIf="modalCreate">
@@ -39,8 +39,10 @@
                       <td>{{ distribuidor.Region }}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
+                          <ng-container *ngIf="distribuidor._id">
                             <button type="button" (click)="edit(distribuidor._id)" class="btn btn-primary">Editar</button>
                             <button type="button" (click)="delete(distribuidor._id)" class="btn btn-danger">Eliminar</button>
+                        </ng-container>
                         </div>                          
                     </td>
                     </tr>

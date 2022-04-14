@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from 'src/app/services/rest.service';
 import { Distribuidor } from '../../interfaces/Prototipos';
 
@@ -12,7 +13,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   Distribuidores: Distribuidor[]=[];
   modalCreate:boolean = false;
 
-  constructor(private Rest: RestService) { }
+  constructor(private Rest: RestService, private router: Router) { }
 
   ngOnInit(): void {
     this.getDistribuidores();
@@ -36,6 +37,7 @@ export class IndexDistribuidoresComponent implements OnInit {
 
   edit = (id:string) => {
     console.log(`Id a editar es: `,id);
+    this.router.navigate(['edit-distribuidor', id]);
     
   }
 

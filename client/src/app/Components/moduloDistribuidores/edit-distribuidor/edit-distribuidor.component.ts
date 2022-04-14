@@ -26,7 +26,7 @@ export class EditDistribuidorComponent implements OnInit {
 
       this.DistribuidorObservable = this.Rest.get(url);
       this.DistribuidorObservable.subscribe( element =>{
-        console.log(element.Distribuidor);
+        console.log(element);
         
         this.Distribuidor=element.Distribuidor;
       });
