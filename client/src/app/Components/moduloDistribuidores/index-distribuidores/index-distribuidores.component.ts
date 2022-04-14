@@ -3,11 +3,11 @@ import { RestService } from 'src/app/services/rest.service';
 import { Distribuidor } from '../../interfaces/Prototipos';
 
 @Component({
-  selector: 'app-index-distribuidor',
-  templateUrl: './index-distribuidor.component.html',
-  styleUrls: ['./index-distribuidor.component.css']
+  selector: 'app-index-distribuidores',
+  templateUrl: './index-distribuidores.component.html',
+  styleUrls: ['./index-distribuidores.component.css']
 })
-export class IndexDistribuidorComponent implements OnInit {
+export class IndexDistribuidoresComponent implements OnInit {
 
   Distribuidores: Distribuidor[]=[];
   modalCreate:boolean = false;

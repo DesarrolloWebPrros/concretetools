@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from 'src/app/services/rest.service';
-import { Promociones } from '../../interfaces/Prototipos';
+import { Promocion } from '../../interfaces/Prototipos';
 
 @Component({
   selector: 'app-index-promociones',

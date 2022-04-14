@@ -9,11 +9,15 @@ import { CreateProductoComponent } from './Components/moduloProductos/create-pro
 import { IndexProductosComponent } from './Components/moduloProductos/index-productos/index-productos.component';
 import { ContactComponent } from './Components/shared/contact/contact.component';
 import { ProductoComponent } from './Components/moduloProductos/producto/producto.component';
+import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
+import { IndexPromocionesComponent } from './Components/moduloPromociones/index-promociones/index-promociones.component';
 
 const routes: Routes = [  
+  { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
   { path: 'distribuidores-autorizados'    , pathMatch: 'full',  component: DistribuidoresComponent      },
+  { path: 'admin-promociones'             , pathMatch: 'full',  component: IndexPromocionesComponent      },
   { path: 'admin-productos'               , pathMatch: 'full',  component: IndexProductosComponent      },
-  { path: 'producto/:id'                   , component: ProductoComponent            },
+  { path: 'producto/:id'                  , pathMatch: 'full',  component: ProductoComponent            },
   { path: 'promociones'                   , pathMatch: 'full',  component: PromocionesComponent         },
   { path: 'productos'                     , pathMatch: 'full',  component: ProductosComponent           },
   { path: 'contact'                       , pathMatch: 'full',  component: ContactComponent             },

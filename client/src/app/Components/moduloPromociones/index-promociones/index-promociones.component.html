@@ -5,7 +5,7 @@
       <br>
       <h1 class="display-4">Promociones</h1>
       <p class="lead">Gestión de promociones</p>
-      <button type="button" (click)="newPromociones()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
+      <button type="button" (click)="newPromocion()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
         {{ !modalCreate ? 'Crear Promociones' : 'Descartar'}}
       </button>
       <!-- <button type="button" (click)="newPromocion()" class="btn btn-success float-right">Nuevo</button> -->
@@ -18,21 +18,31 @@
         <table class="table table-hover" data-sticky-header="true">
             <thead class="thead-dark" >
               <tr >
-                <th scope="col">Clave</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Descripción</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Inicio</th>
+                <th scope="col">Fin</th>
                 <th scope="col">Precio</th>
-                <th scope="col">Promocion</th>
+                <th scope="col">Operaciones</th>
               </tr>
             </thead>
             <tbody>
     
                 <ng-container *ngFor="let promocion of Promociones">
                     <tr>
-                      <th scope="row"> {{ promocion.Clave }} </th>
-                      <td>{{ promocion.Nombre }}</td>
-                      <td>{{ promocion.Descripcion }}</td>
-                      <td>{{ promocion.Precio }}</td>
+                      <th scope="row"> {{ promocion.Tipo }} </th>
+                      <td>{{ promocion.Producto }}</td>
+                      <td>{{ promocion.Inicio }}</td>
+                      <td>{{ promocion.Fin }}</td>
+                      <td>
+                        <ng-container *ngIf="promocion.Precio">
+                          {{ promocion.Precio | number }}
+                        </ng-container>
+                        <ng-container *ngIf="!promocion.Precio">
+                          N / A
+                        </ng-container>
+                        
+                      </td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" (click)="edit(promocion._id)" class="btn btn-primary">Editar</button>

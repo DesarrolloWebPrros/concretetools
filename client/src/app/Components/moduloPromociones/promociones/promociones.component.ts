@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from 'src/app/services/rest.service';
-import {Promociones, Producto} from '../../interfaces/Prototipos';
+import {Promocion, Producto} from '../../interfaces/Prototipos';
 @Component({
   selector: 'app-promociones',
   templateUrl: './promociones.component.html',
@@ -8,7 +8,7 @@ import {Promociones, Producto} from '../../interfaces/Prototipos';
 })
 export class PromocionesComponent implements OnInit {
 
-  Promociones: Promociones[]=[];
+  Promociones: Promocion[]=[];
   Productos: Producto[]=[];
 
   constructor(private Rest: RestService) { }

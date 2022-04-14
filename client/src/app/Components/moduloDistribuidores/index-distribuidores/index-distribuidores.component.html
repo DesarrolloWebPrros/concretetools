@@ -5,7 +5,7 @@
       <br>
       <h1 class="display-4">Distribuidores</h1>
       <p class="lead">Gestión de distribuidores</p>
-      <button type="button" (click)="newProducto()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
+      <button type="button" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
         {{ !modalCreate ? 'Crear Distribuidores' : 'Descartar'}}
       </button>
       <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
@@ -24,16 +24,19 @@
                 <th scope="col">e-Mail</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Región</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody>
     
                 <ng-container *ngFor="let distribuidor of Distribuidores">
                     <tr>
-                        <th scope="row"> {{ distribuidor.Clave }} </th>
-                        <td>{{ distribuidor.Nombre }}</td>
-                      <td>{{ distribuidor.Descripcion }}</td>
-                      <td>{{ distribuidor.Precio }}</td>
+                      <th scope="row"> {{ distribuidor.Clave }} </th>
+                      <td>{{ distribuidor.Nombre }}</td>
+                      <td>{{ distribuidor.Telefono }}</td>
+                      <td>{{ distribuidor.email }}</td>
+                      <td>{{ distribuidor.Direccion }}</td>
+                      <td>{{ distribuidor.Region }}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" (click)="edit(distribuidor._id)" class="btn btn-primary">Editar</button>
