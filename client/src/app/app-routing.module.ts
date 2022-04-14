@@ -11,6 +11,7 @@ import { ContactComponent } from './Components/shared/contact/contact.component'
 import { ProductoComponent } from './Components/moduloProductos/producto/producto.component';
 import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
 import { IndexPromocionesComponent } from './Components/moduloPromociones/index-promociones/index-promociones.component';
+import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
 
 const routes: Routes = [  
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'home'                          , pathMatch: 'full',  component: HomeComponent                },
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                         },
   // Rutas para operaciones
-  { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent                }
+  { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent      },
+  { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent        }
 ];
 
 @NgModule({

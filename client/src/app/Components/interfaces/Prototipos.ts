@@ -13,9 +13,9 @@ export interface Producto {
     Nombre:         string,
     Clave:          string,
     Descripcion:    string[],
-    Precio:         string,
+    Precio:         number,
     Aplicaciones:   string[],
-    Imagen:         string
+    Imagen?:         string
 }
 export interface Distribuidor {
     _id:           string,

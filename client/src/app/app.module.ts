@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './Components/shared/about/about.component';
 import { HomeComponent } from './Components/shared/home/home.component';
 import { MainComponent } from './Components/layouts/main/main.component';
@@ -19,6 +20,7 @@ import { IndexPromocionesComponent } from './Components/moduloPromociones/index-
 import { CreatePromocionComponent } from './Components/moduloPromociones/create-promocion/create-promocion.component';
 import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
 import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
+import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,14 @@ import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/
     IndexPromocionesComponent,
     CreatePromocionComponent,
     CreateDistribuidorComponent,
-    IndexDistribuidoresComponent
+    IndexDistribuidoresComponent,
+    EditProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

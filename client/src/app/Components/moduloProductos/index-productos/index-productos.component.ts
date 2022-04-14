@@ -31,7 +31,9 @@ export class IndexProductosComponent implements OnInit {
   }
 
   edit = (id:string) => {
+    
     console.log(`Id a editar es: `,id);
+    this.router.navigate(['edit-producto', id]);
     
   }
 

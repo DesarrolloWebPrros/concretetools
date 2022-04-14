@@ -1,0 +1,40 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { RestService } from 'src/app/services/rest.service';
+import { Producto } from '../../interfaces/Prototipos';
+
+@Component({
+  selector: 'app-edit-producto',
+  templateUrl: './edit-producto.component.html',
+  styleUrls: ['./edit-producto.component.css']
+})
+export class EditProductoComponent implements OnInit {
+
+  Producto:any;
+  ProductoObservable: Observable<any>= new Observable;
+  showPhoto:boolean=true;
+
+  constructor(
+    private activatedRoute: ActivatedRoute, 
+    private Rest: RestService) { }
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe( params => {
+      const url:string = 'http://localhost:3768/api/producto/'+params["id"];
+      console.log(url);
+
+      this.ProductoObservable = this.Rest.get(url);
+      this.ProductoObservable.subscribe( element =>{
+        console.log(element.Producto);
+        
+        this.Producto=element.Producto;
+      });
+    });
+  }
+
+  eliminarFoto = () => {
+    this.showPhoto = !this.showPhoto;
+  }
+
+}
