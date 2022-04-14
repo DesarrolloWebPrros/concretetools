@@ -4,11 +4,11 @@
       <br>
       <br>
       <h1 class="display-4">Distribuidores</h1>
-      <p class="lead">Gestión de distribuidores</p>
-      <button type="button" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
-        {{ !modalCreate ? 'Crear Distribuidores' : 'Descartar'}}
+      <p class="lead">Gestión de distribuidores autorizados</p>
+      <button type="button" (click)="newDistribuidor()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">
+        Nuevo Distribuidor
       </button>
-      <!-- <button type="button" (click)="newProducto()" class="btn btn-success float-right">Nuevo</button> -->
+      <!-- <button type="button" (click)="newdistribuidor()" class="btn btn-success float-right">Nuevo</button> -->
     </div>
 </div>
 <app-create-distribuidor *ngIf="modalCreate">
@@ -21,7 +21,7 @@
                 <th scope="col">Clave</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Telefono</th>
-                <th scope="col">e-Mail</th>
+                <th scope="col">E-Mail</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Región</th>
                 <th scope="col">Acciones</th>
@@ -39,8 +39,10 @@
                       <td>{{ distribuidor.Region }}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
+                          <ng-container *ngIf="distribuidor._id">
                             <button type="button" (click)="edit(distribuidor._id)" class="btn btn-primary">Editar</button>
                             <button type="button" (click)="delete(distribuidor._id)" class="btn btn-danger">Eliminar</button>
+                        </ng-container>
                         </div>                          
                     </td>
                     </tr>

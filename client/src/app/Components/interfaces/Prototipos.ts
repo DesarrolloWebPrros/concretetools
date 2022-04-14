@@ -24,6 +24,6 @@ export interface Distribuidor {
     Direccion:      string,
     Telefono:       string,
     email:          string,
-    Imagen:         string,
+    Imagen?:        string,
     Region:         string
 }

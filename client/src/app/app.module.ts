@@ -20,6 +20,8 @@ import { CreatePromocionComponent } from './Components/moduloPromociones/create-
 import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
 import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
 import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
+import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edit-distribuidor/edit-distribuidor.component';
+import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { EditProductoComponent } from './Components/moduloProductos/edit-product
     CreatePromocionComponent,
     CreateDistribuidorComponent,
     IndexDistribuidoresComponent,
-    EditProductoComponent
+    EditProductoComponent,
+    EditDistribuidorComponent,
+    EditPromocionComponent
   ],
   imports: [
     BrowserModule,

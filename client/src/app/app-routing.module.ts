@@ -12,6 +12,7 @@ import { ProductoComponent } from './Components/moduloProductos/producto/product
 import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/index-distribuidores/index-distribuidores.component';
 import { IndexPromocionesComponent } from './Components/moduloPromociones/index-promociones/index-promociones.component';
 import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
+import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edit-distribuidor/edit-distribuidor.component';
 
 const routes: Routes = [  
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                         },
   // Rutas para operaciones
   { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent      },
-  { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent        }
+  { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent        },
+  { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent    }
 ];
 
 @NgModule({
