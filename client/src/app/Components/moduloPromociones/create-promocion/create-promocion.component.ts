@@ -13,8 +13,8 @@ export class CreatePromocionComponent implements OnInit {
   Promocion:Promocion={
     Tipo: '',
     Producto: '',
-    Inicio: '',
-    Fin: '',
+    Inicio: new Date(),
+    Fin: new Date(),
     Precio: 0,
     Imagen:''
   };
@@ -45,63 +45,63 @@ export class CreatePromocionComponent implements OnInit {
 
   ngOnInit(): void {}
 
-    submit(){
-      console.log(this.myForm.value);
-      this.Rest.post('http://localhost:3768/api/promocion', this.myForm.value)
-  
-        .subscribe(res => {
-  
-          console.log(res);
-  
-          alert('Uploaded Successfully.');
-  
-        })
-    }
-  
-    guardar = () => {
-      console.log(`Promocion a enviar: `, this.Promocion);
-      
-      // validar campos
-  
-      // enviar peticion a API
-  
-      // validar respuesta (Redireccionas o marcas error en form)
-    }
-  
-    onFileChange(event:any) {
-  
-      const reader = new FileReader();
-      
-  
-      if(event.target.files && event.target.files.length) {
-  
-        const [file] = event.target.files;
-  
-        reader.readAsDataURL(file);
-  
-      
-  
-        reader.onload = () => {   
-  
-          this.imageSrc = reader.result as string;
-       
-  
-          this.myForm.patchValue({
-  
-            fileSource: reader.result
-  
-          });   
-  
-        };
-  
-     
-  
-      }
-  
-    }
-  
+  submit(){
+    console.log(this.myForm.value);
+    this.Rest.post('http://localhost:3768/api/promocion', this.myForm.value)
 
+      .subscribe(res => {
+
+        console.log(res);
+
+        alert('Uploaded Successfully.');
+
+      })
+  }
+  
+  guardar = () => {
+    console.log(`Promocion a enviar: `, this.Promocion);
+    
+    // validar campos
+
+    // enviar peticion a API
+
+    // validar respuesta (Redireccionas o marcas error en form)
+  }
+  
+  onFileChange(event:any) {
+
+    const reader = new FileReader();
+    
+
+    if(event.target.files && event.target.files.length) {
+
+      const [file] = event.target.files;
+
+      reader.readAsDataURL(file);
+
+    
+
+      reader.onload = () => {   
+
+        this.imageSrc = reader.result as string;
+      
+
+        this.myForm.patchValue({
+
+          fileSource: reader.result
+
+        });   
+
+      };
+
+    
+
+    }
 
   }
+  
+
+
+}
 
 

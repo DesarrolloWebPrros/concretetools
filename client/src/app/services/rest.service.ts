@@ -13,8 +13,8 @@ export class RestService {
   }
 
   post = (url:string, data:any)=>{
-    /* let headers = new HttpHeaders();
-    headers = headers.set('Content-Type', 'application/json; charset=utf-8');  */
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8'); 
     return this.http.post(url, data); 
   }
 

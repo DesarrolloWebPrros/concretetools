@@ -32,8 +32,8 @@
                     <tr>
                       <th scope="row"> {{ promocion.Tipo }} </th>
                       <td>{{ promocion.Producto }}</td>
-                      <td>{{ promocion.Inicio }}</td>
-                      <td>{{ promocion.Fin }}</td>
+                      <td>{{ promocion.Inicio | date: 'dd-MM-YYYY' }}</td>
+                      <td>{{ promocion.Fin | date: 'dd-MM-YYYY'}}</td>
                       <td>
                         <ng-container *ngIf="promocion.Precio">
                           {{ promocion.Precio | number }}
@@ -45,8 +45,10 @@
                       </td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" (click)="edit(promocion._id)" class="btn btn-primary">Editar</button>
-                            <button type="button" (click)="delete(promocion._id)" class="btn btn-danger">Eliminar</button>
+                            <ng-container *ngIf="promocion._id">
+                              <button type="button" (click)="edit(promocion._id)" class="btn btn-primary">Editar</button>
+                              <button type="button" (click)="delete(promocion._id)" class="btn btn-danger">Eliminar</button>
+                            </ng-container>
                         </div>                          
                     </td>
                     </tr>

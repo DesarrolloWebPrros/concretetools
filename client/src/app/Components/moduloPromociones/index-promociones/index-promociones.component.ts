@@ -22,6 +22,7 @@ export class IndexPromocionesComponent implements OnInit {
   getPromociones = () => {
     this.Rest.get(`http://localhost:3768/api/promociones`).subscribe((respuesta:any) => {
       this.Promociones = respuesta.Promociones;
+      
       console.log(`Promociones =>>>`,respuesta);
     });
   }

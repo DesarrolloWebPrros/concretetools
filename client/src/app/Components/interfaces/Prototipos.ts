@@ -1,11 +1,12 @@
 export interface Promocion {
-    _id:    string,
-    Tipo:   string,
-    Producto: string,
+    _id?:    string,
+    Tipo:       string,
+    Producto:   string,
     Inicio:     Date,
     Fin:        Date,
     Precio?:    number,
-    Item?:      Producto
+    Item?:      Producto,
+    Imagen?:    string
 }
 
 export interface Producto {
