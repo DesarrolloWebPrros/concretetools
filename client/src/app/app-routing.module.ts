@@ -13,6 +13,8 @@ import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/
 import { IndexPromocionesComponent } from './Components/moduloPromociones/index-promociones/index-promociones.component';
 import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
 import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edit-distribuidor/edit-distribuidor.component';
+import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
+import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
 
 const routes: Routes = [  
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
@@ -27,9 +29,11 @@ const routes: Routes = [
   { path: 'home'                          , pathMatch: 'full',  component: HomeComponent                },
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                         },
   // Rutas para operaciones
+  { path: 'create-distribuidor'           , pathMatch: 'full',  component: CreateDistribuidorComponent      },
   { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent      },
   { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent        },
-  { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent    }
+  { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent    },
+  { path: 'edit-promocion/:id'            , pathMatch: 'full',  component: EditPromocionComponent       }
 ];
 
 @NgModule({

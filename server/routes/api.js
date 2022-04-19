@@ -12,9 +12,9 @@ api.post('/producto', ProductoController.save);
 api.put('/productos/:id', ProductoController.update);
 
 api.get('/promociones', PromocionController.index);
-api.get('/producto/:id', PromocionController.show);
-api.post('/producto', PromocionController.save);
-api.put('/productos/:id', PromocionController.update);
+api.get('/promocion/:id', PromocionController.show);
+api.post('/promocion', PromocionController.save);
+api.put('/promociones/:id', PromocionController.update);
 
 api.get('/distribuidores', DistribuidorController.index);
 api.get('/distribuidor/:id', DistribuidorController.show);

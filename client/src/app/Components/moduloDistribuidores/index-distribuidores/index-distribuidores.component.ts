@@ -32,6 +32,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   newDistribuidor = ()=>{
     this.openModalCreate();
     console.log(`abrio`, this.modalCreate);
+    this.router.navigate(['create-distribuidor']);
     
   }
 

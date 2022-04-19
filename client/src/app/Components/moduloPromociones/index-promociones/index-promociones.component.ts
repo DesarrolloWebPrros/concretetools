@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from 'src/app/services/rest.service';
 import { Promocion } from '../../interfaces/Prototipos';
 
@@ -12,7 +13,7 @@ export class IndexPromocionesComponent implements OnInit {
   Promociones: Promocion[]=[];
   modalCreate:boolean = false;
 
-  constructor(private Rest: RestService) { }
+  constructor(private Rest: RestService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPromociones();
@@ -31,11 +32,13 @@ export class IndexPromocionesComponent implements OnInit {
   newPromocion = ()=>{
     this.openModalCreate();
     console.log(`abrio`, this.modalCreate);
+    this.router.navigate(['create-promocion']);
     
   }
 
   edit = (id:string) => {
     console.log(`Id a editar es: `,id);
+    this.router.navigate(['edit-promocion', id]);
     
   }
 
