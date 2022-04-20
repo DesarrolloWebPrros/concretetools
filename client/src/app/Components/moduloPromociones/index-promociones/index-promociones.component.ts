@@ -30,11 +30,9 @@ export class IndexPromocionesComponent implements OnInit {
   openModalCreate = () => {
     this.modalCreate = !this.modalCreate;
   }
+
   newPromocion = ()=>{
-    this.openModalCreate();
-    console.log(`abrio`, this.modalCreate);
-    this.router.navigate(['create-promocion']);
-    
+    this.router.navigate(['create-promocion']);    
   }
 
   edit = (id:string) => {
