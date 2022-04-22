@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                                    },
   // Rutas para operaciones
   { path: 'create-distribuidor'           , pathMatch: 'full',  component: CreateDistribuidorComponent             },
+  { path: 'create-promocion'              , pathMatch: 'full',  component: CreateDistribuidorComponent             },
   { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent                 },
   { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent               },
   { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent                   },
