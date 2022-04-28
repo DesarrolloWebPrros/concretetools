@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { RestService } from 'src/app/services/rest.service';
 import { Producto } from '../../interfaces/Prototipos';
 
@@ -57,8 +57,8 @@ export class CreateProductoComponent implements OnInit {
       })
   }
 
-  guardar = () => {
-    console.log(`Producto a enviar: `, this.Producto);
+  guardar = (form : NgForm) => {
+    console.log(`Producto a enviar: `, form);
     
     // validar campos
 
