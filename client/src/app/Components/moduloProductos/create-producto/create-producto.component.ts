@@ -54,7 +54,7 @@ export class CreateProductoComponent implements OnInit {
 
         alert('Uploaded Successfully.');
 
-      })
+    });
   }
 
   guardar = (form : NgForm) => {
@@ -63,7 +63,15 @@ export class CreateProductoComponent implements OnInit {
     // validar campos
 
     // enviar peticion a API
+    this.Rest.post('http://localhost:3768/api/producto', this.myForm.value)
 
+      .subscribe(res => {
+
+        console.log(res);
+
+        alert('Uploaded Successfully.');
+
+    });
     // validar respuesta (Redireccionas o marcas error en form)
   }
 

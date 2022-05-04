@@ -13,11 +13,11 @@ export class RestService {
   }
 
   post = (url:string, data:any)=>{
-    let encabezado = new HttpHeaders(
+    /* let encabezado = new HttpHeaders(
       {'Content-Type':'application/json; charset=utf-8'}
     );
-    encabezado.append('Access-Control-Allow-Headers', 'accept');
-    return this.http.post(url, data, {headers: encabezado}); 
+    encabezado.append('Access-Control-Allow-Headers', 'accept'); */
+    return this.http.post(url, data); 
   }
 
 }
