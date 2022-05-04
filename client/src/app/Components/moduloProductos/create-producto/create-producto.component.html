@@ -22,59 +22,81 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Nombre</span>
               </div>
-              <input type="text" [ngModel]="Producto.Nombre" 
-                    name="Nombre" class="form-control" 
+              <input type="text" [ngModel]="Producto.Nombre"
+                    name="Nombre" class="form-control"
                     #nombre="ngModel" [class.is-invalid]="nombre.invalid && nombre.touched"
-                    placeholder="Nombre del producto" 
+                    placeholder="Nombre del producto"
                     aria-label="Nombre"
                     required minlength="5">
           </div>
           <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger mb-3">El nombre debe ser obligatorio y contener al menos 5 letras</small>
-          
+
           <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Clave</span>
               </div>
-              <input type="text" [ngModel]="Producto.Clave" 
-                    name="Clave" class="form-control" 
+              <input type="text" [ngModel]="Producto.Clave"
+                    name="Clave" class="form-control"
                     [class.is-invalid]="Clave.invalid && Clave.touched"
                     #Clave="ngModel"
                     placeholder="Clave" aria-label="Clave"
                     required minlength="6">
           </div>
+          <small *ngIf="Clave.invalid && Clave.touched" class="form-text text-danger mb-3">La clave debe ser obligatoria y contener letras y numeros</small>
+
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Descripcion</span>
+              <span class="input-group-text" id="basic-addon1">Descripción</span>
             </div>
-            <input type="text" ngModel name="Descripcion" class="form-control" placeholder="Descripcion" aria-label="descripcion">
+            <input type="text" [ngModel]="Producto.Descripcion"
+                    name="Descripcion" class="form-control"
+                    [class.is-invalid]="Descripcion.invalid && Descripcion.touched"
+                    #Descripcion="ngModel"
+                    placeholder="Descripción" aria-label="Descripción"
+                    required minlength="6">
           </div>
+          <small *ngIf="Descripcion.invalid && Descripcion.touched" class="form-text text-danger mb-3">La Descripción debe ser obligatoria</small>
+
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Aplicaciones</span>
             </div>
-            <input type="text" ngModel name="Aplicaciones" class="form-control" placeholder="Aplicaciones" aria-label="aplicaciones">
+            <input type="text" [ngModel]="Producto.Aplicaciones"
+                    name="Aplicaciones" class="form-control"
+                    [class.is-invalid]="Aplicaciones.invalid && Aplicaciones.touched"
+                    #Aplicaciones="ngModel"
+                    placeholder="Aplicaciones" aria-label="Aplicaciones"
+                    required minlength="6">
           </div>
+          <small *ngIf="Aplicaciones.invalid && Aplicaciones.touched" class="form-text text-danger mb-3">Las Aplicaciones debe ser obligatorias</small>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Precio</span>
             </div>
-            <input type="text" ngModel name="Precio" class="form-control" placeholder="Precio" aria-label="precio">
+            <input type="text" [ngModel]="Producto.Precio"
+                    name="Precio" class="form-control"
+                    [class.is-invalid]="Precio.invalid && Precio.touched"
+                    #Precio="ngModel"
+                    placeholder="Precio" aria-label="Precio"
+                    required minlength="6">
           </div>
-          <div class="input-group mb-3">   
+          <small *ngIf="Precio.invalid && Precio.touched" class="form-text text-danger mb-3">El precio debe ser obligatorio</small>
+
+          <div class="input-group mb-3">
             <div class="custom-file">
               <input type="file" (change)="onFileChange($event)"  ngModel  name="file" id="file" class="custom-file-input" id="validatedCustomFile" >
               <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
 
                 <div *ngIf="f.file.errors?.required">Archivo requerido.</div>
-    
+
             </div>
-              <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>            
-            </div>           
+              <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>
+            </div>
           </div>
           <div class="input-group mb-3 ">
             <a class="float btn btn-dark" href="admin-productos">
-              Volver     
+              Volver
             </a>
             <input class="btn btn-secondary" type="submit" value="Guardar">
           </div>

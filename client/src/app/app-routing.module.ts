@@ -15,8 +15,9 @@ import { EditProductoComponent } from './Components/moduloProductos/edit-product
 import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edit-distribuidor/edit-distribuidor.component';
 import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
 import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
+import { CreatePromocionComponent } from './Components/moduloPromociones/create-promocion/create-promocion.component';
 
-const routes: Routes = [  
+const routes: Routes = [
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
   { path: 'distribuidores-autorizados'    , pathMatch: 'full',  component: DistribuidoresComponent                 },
   { path: 'admin-promociones'             , pathMatch: 'full',  component: IndexPromocionesComponent               },
@@ -41,7 +42,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {   
+export class AppRoutingModule {
   constructor(){}
-  ngOnInit(): void {}; 
+  ngOnInit(): void {};
 }

@@ -59,7 +59,7 @@ export class CreateProductoComponent implements OnInit {
 
   guardar = (form : NgForm) => {
     console.log(`Producto a enviar: `, form);
-    
+
     // validar campos
 
     // enviar peticion a API
@@ -70,7 +70,7 @@ export class CreateProductoComponent implements OnInit {
   onFileChange(event:any) {
 
     const reader = new FileReader();
-    
+
 
     if(event.target.files && event.target.files.length) {
 
@@ -78,22 +78,22 @@ export class CreateProductoComponent implements OnInit {
 
       reader.readAsDataURL(file);
 
-    
 
-      reader.onload = () => {   
+
+      reader.onload = () => {
 
         this.imageSrc = reader.result as string;
-     
+
 
         this.myForm.patchValue({
 
           fileSource: reader.result
 
-        });   
+        });
 
       };
 
-   
+
 
     }
 

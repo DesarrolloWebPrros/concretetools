@@ -21,8 +21,14 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Tipo</span>
           </div>
-          <input type="text" class="form-control" placeholder="Tipo de promoción" aria-label="Tipo">
+          <input type="text" [ngModel]="Promocion.Tipo"
+                  name="Tipo" class="form-control"
+                  #Tipo="ngModel" [class.is-invalid]="Tipo.invalid && Tipo.touched"
+                  placeholder="Tipo del producto"
+                  aria-label="Tipo"
+                  required minlength="5">
       </div>
+      <small *ngIf="Tipo.invalid && Tipo.touched" class="form-text text-danger mb-3">El Tipo debe ser obligatorio y contener al menos 5 letras</small>
 
       <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -48,16 +54,16 @@
         </div>
         <input type="text" class="form-control" placeholder="Precio" aria-label="precio">
       </div>
-      <div class="input-group mb-3">   
+      <div class="input-group mb-3">
         <div class="custom-file">
           <input type="file" class="custom-file-input" id="validatedCustomFile" >
-          <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>            
-        </div>       
-        
+          <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>
+        </div>
+
       </div>
       <div class="input-group mb-3">
         <a class="float btn btn-dark" href="admin-promociones">
-          Volver       
+          Volver
         </a>
         <input class="btn btn-secondary" type="submit" value="Guardar">
       </div>
