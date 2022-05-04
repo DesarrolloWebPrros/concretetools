@@ -19,5 +19,12 @@ export class RestService {
     encabezado.append('Access-Control-Allow-Headers', 'accept'); */
     return this.http.post(url, data); 
   }
+  put = (url:string, data:any)=>{
+    return this.http.put(url, data); 
+  }
+
+  del = (url:string)=>{
+    return this.http.delete(url); 
+  }
 
 }

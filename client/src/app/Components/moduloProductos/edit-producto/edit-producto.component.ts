@@ -33,6 +33,19 @@ export class EditProductoComponent implements OnInit {
     });
   }
 
+  actualizarProducto = () => {
+    this.Producto.Precio = Number(this.Producto.Precio);
+    this.Rest.put('http://localhost:3768/api/productos/'+this.Producto._id, this.Producto)
+
+    .subscribe(res => {
+
+      console.log(res);
+
+      alert('Actualizado correctamente.');
+
+  });
+  }
+
   eliminarFoto = () => {
     this.showPhoto = !this.showPhoto;
   }

@@ -63,7 +63,7 @@ export class CreateProductoComponent implements OnInit {
     // validar campos
 
     // enviar peticion a API
-    this.Rest.post('http://localhost:3768/api/producto', this.myForm.value)
+    this.Rest.post('http://localhost:3768/api/producto', form.value)
 
       .subscribe(res => {
 

@@ -12,6 +12,8 @@ export class IndexProductosComponent implements OnInit {
 
   Productos: Producto[]=[];
   modalCreate:boolean = false;
+  openModalDeleteBool:boolean = false;
+  productoToDelete:any;
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -38,8 +40,12 @@ export class IndexProductosComponent implements OnInit {
   }
 
   delete = (id:string) => {
-    console.log(`Id a eliminar es: `,id);
-    
+    this.productoToDelete = this.Productos.find(P=>P._id === id);
+    console.log(`Id a eliminar es: `,this.productoToDelete);
+    this.openModalDelete();
+  }
+  openModalDelete = () =>{
+    this.openModalDeleteBool = !this.openModalDeleteBool;
   }
 
 }

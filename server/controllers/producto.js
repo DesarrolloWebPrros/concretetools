@@ -35,16 +35,15 @@ const show = (req, res) => {
 const save = (req, res) => {
 
     let producto = new Producto();
-
     const params = req.body;
 
-    producto.Nombre = params.nombre;
-    producto.Clave = params.clave;
-    producto.Descripcion = params.descripcion;
-    producto.Precio = params.precio;
-    producto.Aplicaciones = params.aplicaciones;
-    producto.Imagen = params.imagen;
-    console.log(params, producto);
+    producto.Nombre = params.Nombre;
+    producto.Clave = params.Clave;
+    producto.Descripcion = params.Descripcion;
+    producto.Precio = params.Precio;
+    producto.Aplicaciones = params.Aplicaciones;
+    producto.Imagen = params.file;
+    console.log(producto);
     producto.save( (err, productoStored ) => {
         if (err) {
             res.status(500).send({message: `Error al guardar Producto ${params.nombre}`});            
@@ -56,8 +55,9 @@ const save = (req, res) => {
 
 const update = (req, res) => {
     const productoId = req.params.id;
-    const update = req.body;
-
+    let update = req.body;
+    console.log(`Update de llegada: `, update);
+    update.Precio = Number(update.Precio);
     Producto.findOneAndUpdate( productoId, update, (err, productoUpdated ) => {
         if (err) {
             res.status(500).send({message: `Error al actualizar Producto ${productoId}`}); 
@@ -68,4 +68,26 @@ const update = (req, res) => {
 
 }
 
-module.exports = { index, show, save, update }
+const deleteProducto = (req, res) => {
+    var productoId = req.params.id;
+
+    Producto.findById(productoId, (err, producto) => {
+        if (err) {
+            res.status(500).send({ message: ['Error al devolver el producto'], error: true });
+        } else {
+            if (!producto) {
+                res.status(404).send({ message: ['No existe el producto'], error: true });
+            } else {
+                producto.remove(err => {
+                    if(err){
+                        res.status(500).send({message: ['El producto no ha podido ser eliminado'], error: true });
+                    } else {
+                        res.status(200).send({message: ['El prodcuto ha sido eliminado exitosamente'], error: false });
+                    }
+                 });
+            }
+        }
+    });
+ }
+
+module.exports = { index, show, save, update, deleteProducto }

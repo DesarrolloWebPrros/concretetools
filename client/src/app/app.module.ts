@@ -22,6 +22,7 @@ import { IndexDistribuidoresComponent } from './Components/moduloDistribuidores/
 import { EditProductoComponent } from './Components/moduloProductos/edit-producto/edit-producto.component';
 import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edit-distribuidor/edit-distribuidor.component';
 import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
+import { ModalDeleteComponent } from './Components/layouts/modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { EditPromocionComponent } from './Components/moduloPromociones/edit-prom
     CreateDistribuidorComponent,
     EditProductoComponent,
     EditDistribuidorComponent,
-    EditPromocionComponent
+    EditPromocionComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,
