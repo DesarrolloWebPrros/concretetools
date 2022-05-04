@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { RestService } from 'src/app/services/rest.service';
 import { Promocion } from '../../interfaces/Prototipos';
 
@@ -57,21 +57,20 @@ export class CreatePromocionComponent implements OnInit {
 
       })
   }
-  
-  guardar = () => {
-    console.log(`Promocion a enviar: `, this.Promocion);
-    
+
+  guardar = (form : NgForm) => {
+    console.log(`Promocion a enviar: `, form);
+
     // validar campos
 
     // enviar peticion a API
 
-    // validar respuesta (Redireccionas o marcas error en form)
   }
-  
+
   onFileChange(event:any) {
 
     const reader = new FileReader();
-    
+
 
     if(event.target.files && event.target.files.length) {
 
@@ -79,27 +78,27 @@ export class CreatePromocionComponent implements OnInit {
 
       reader.readAsDataURL(file);
 
-    
 
-      reader.onload = () => {   
+
+      reader.onload = () => {
 
         this.imageSrc = reader.result as string;
-      
+
 
         this.myForm.patchValue({
 
           fileSource: reader.result
 
-        });   
+        });
 
       };
 
-    
+
 
     }
 
   }
-  
+
 
 
 }

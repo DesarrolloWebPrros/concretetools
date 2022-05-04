@@ -5,14 +5,14 @@
       <br>
       <h1 class="display-4">Promociones</h1>
       <p class="lead">Gestión de promociones</p>
-      <button type="button" (click)="newPromocion()" [class]="!modalCreate ? 'btn btn-success float-right' : 'btn btn-danger float-right' " data-toggle="modal" data-target="#exampleModalCenter">
-        {{ !modalCreate ? 'Crear Promociones' : 'Descartar'}}
+      <button type="button" (click)="newPromocion()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">
+        Nueva Promoción
       </button>
       <!-- <button type="button" (click)="newPromocion()" class="btn btn-success float-right">Nuevo</button> -->
     </div>
 </div>
-<app-create-promocion *ngIf="modalCreate">
-</app-create-promocion>
+<!--app-create-promocion *ngIf="modalCreate">
+</app-create-promocion-->
 <div class="container overflow-auto"  style="height: 650px;">
     <div class="row justify-content-md-center">
         <table class="table table-hover" data-sticky-header="true">
@@ -27,7 +27,7 @@
               </tr>
             </thead>
             <tbody>
-    
+
                 <ng-container *ngFor="let promocion of Promociones">
                     <tr>
                       <th scope="row"> {{ promocion.Tipo }} </th>
@@ -41,7 +41,7 @@
                         <ng-container *ngIf="!promocion.Precio">
                           N / A
                         </ng-container>
-                        
+
                       </td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
@@ -49,11 +49,11 @@
                               <button type="button" (click)="edit(promocion._id)" class="btn btn-primary">Editar</button>
                               <button type="button" (click)="delete(promocion._id)" class="btn btn-danger">Eliminar</button>
                             </ng-container>
-                        </div>                          
+                        </div>
                     </td>
                     </tr>
-                </ng-container>            
-    
+                </ng-container>
+
             </tbody>
         </table>
     </div>

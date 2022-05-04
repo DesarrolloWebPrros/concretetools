@@ -32,28 +32,57 @@
 
       <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Telefono</span>
+            <span class="input-group-text" id="basic-addon1">Telefóno</span>
           </div>
-          <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefóno">
-      </div>
+          <input type="text" [ngModel]="Distribuidor.Telefono"
+          name="Telefono" class="form-control"
+          #Telefono="ngModel" [class.is-invalid]="Telefono.invalid && Telefono.touched"
+          placeholder="Telefóno del distribuidor"
+          aria-label="Telefóno"
+          required minlength="5">
+  </div>
+  <small *ngIf="Telefono.invalid && Telefono.touched" class="form-text text-danger mb-3">El telefóno del distribuidor debe ser obligatorio y contener 10 digitos</small>
+
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">email</span>
+          <span class="input-group-text" id="basic-addon1">E-mail</span>
         </div>
-        <input type="text" class="form-control" placeholder="email" aria-label="E-Mail">
-      </div>
+        <input type="text" [ngModel]="Distribuidor.email"
+              name="Email" class="form-control"
+              #Email="ngModel" [class.is-invalid]="Email.invalid && Email.touched"
+              placeholder="E-mail del distribuidor"
+              aria-label="Email"
+              required minlength="5">
+</div>
+<small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio</small>
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Direccion</span>
+          <span class="input-group-text" id="basic-addon1">Dirección</span>
         </div>
-        <input type="text" class="form-control" placeholder="Direccion" aria-label="Dirección">
-      </div>
+        <input type="text" [ngModel]="Distribuidor.Direccion"
+              name="Direccion" class="form-control"
+              #Direccion="ngModel" [class.is-invalid]="Direccion.invalid && Direccion.touched"
+              placeholder="Dirección del distribuidor"
+              aria-label="Direccion"
+              required minlength="5">
+</div>
+<small *ngIf="Direccion.invalid && Direccion.touched" class="form-text text-danger mb-3">El Dirección del distribuidor debe ser obligatoria</small>
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Region</span>
+          <span class="input-group-text" id="basic-addon1">Región</span>
         </div>
-        <input type="text" class="form-control" placeholder="Region" aria-label="Región">
-      </div>
+        <input type="text" [ngModel]="Distribuidor.Region"
+        name="Region" class="form-control"
+        #Region="ngModel" [class.is-invalid]="Region.invalid && Region.touched"
+        placeholder="Región del distribuidor"
+        aria-label="Region"
+        required minlength="5">
+</div>
+<small *ngIf="Region.invalid && Region.touched" class="form-text text-danger mb-3">El Región del distribuidor debe ser obligatoria</small>
+
       <div class="input-group mb-3">
         <div class="custom-file">
           <input type="file" class="custom-file-input" id="validatedCustomFile" >

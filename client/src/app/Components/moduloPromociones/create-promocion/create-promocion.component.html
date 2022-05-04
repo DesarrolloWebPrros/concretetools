@@ -16,7 +16,7 @@
               <option value="3">Three</option>
             </select>
         </div> -->
-    <form class="form-group row" style="width: 80%;" [formGroup]="myForm" (ngSubmit)="submit()">
+    <form class="form-group row" style="width: 80%;" #prodmocionForm="ngForm" (ngSubmit)="guardar(prodmocionForm)">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Tipo</span>

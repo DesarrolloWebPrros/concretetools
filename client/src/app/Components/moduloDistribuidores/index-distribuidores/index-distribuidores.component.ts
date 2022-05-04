@@ -30,21 +30,19 @@ export class IndexDistribuidoresComponent implements OnInit {
     this.modalCreate = !this.modalCreate;
   }
   newDistribuidor = ()=>{
-    this.openModalCreate();
-    console.log(`abrio`, this.modalCreate);
     this.router.navigate(['create-distribuidor']);
-    
+
   }
 
   edit = (id:string) => {
     console.log(`Id a editar es: `,id);
     this.router.navigate(['edit-distribuidor', id]);
-    
+
   }
 
   delete = (id:string) => {
     console.log(`Id a eliminar es: `,id);
-    
+
   }
 
 }
