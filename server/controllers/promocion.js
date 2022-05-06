@@ -46,7 +46,8 @@ const save = (req, res) => {
     promocion.Nombre = params.nombre;
     promocion.Clave = params.clave;
     promocion.Descripcion = params.descripcion;
-    promocion.Fecha = params.fecha;
+    promocion.Inicio = params.inicio;
+    promocion.Fin = params.fin;
     promocion.Imagen = params.imagen;
 
     promocion.save( (err, promocionStored ) => {
@@ -70,6 +71,28 @@ const update = (req, res) => {
         }
     })
 
+}
+
+const deletePromocion = (req, res) => {
+    var promocionId = req.params.id;
+
+    promocion.findById(promocionId, (err, promocion) => {
+        if (err) {
+            res.status(500).send({ message: ['Error al devolver la promoción'], error: true });
+        } else {
+            if (!promocion) {
+                res.status(404).send({ message: ['No existe la promoción'], error: true });
+            } else {
+                promocion.remove(err => {
+                    if(err){
+                        res.status(500).send({message: ['La promoción no ha podido ser eliminada'], error: true });
+                    } else {
+                        res.status(200).send({message: ['La promoción ha sido eliminada exitosamente'], error: false });
+                    }
+                 });
+            }
+        }
+    });
 }
 
 module.exports = { index, show, save, update }

@@ -10,7 +10,7 @@ api.get('/productos', ProductoController.index);
 api.get('/producto/:id', ProductoController.show);
 api.post('/producto', ProductoController.save);
 api.put('/productos/:id', ProductoController.update);
-api.delete('/producto/:id', ProductoController.deleteProducto)
+api.delete('/producto/:id', ProductoController.deleteProducto);
 
 api.get('/promociones', PromocionController.index);
 api.get('/promocion/:id', PromocionController.show);

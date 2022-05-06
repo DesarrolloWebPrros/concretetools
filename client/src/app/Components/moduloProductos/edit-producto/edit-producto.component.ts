@@ -16,7 +16,7 @@ export class EditProductoComponent implements OnInit {
   showPhoto:boolean=true;
 
   constructor(
-    private activatedRoute: ActivatedRoute, 
+    private activatedRoute: ActivatedRoute,
     private Rest: RestService) { }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class EditProductoComponent implements OnInit {
       this.ProductoObservable = this.Rest.get(url);
       this.ProductoObservable.subscribe( element =>{
         console.log(element.Producto);
-        
+
         this.Producto=element.Producto;
       });
     });
@@ -38,9 +38,7 @@ export class EditProductoComponent implements OnInit {
     this.Rest.put('http://localhost:3768/api/productos/'+this.Producto._id, this.Producto)
 
     .subscribe(res => {
-
       console.log(res);
-
       alert('Actualizado correctamente.');
 
   });

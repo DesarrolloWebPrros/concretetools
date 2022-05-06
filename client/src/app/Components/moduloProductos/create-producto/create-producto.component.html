@@ -79,7 +79,7 @@
                     [class.is-invalid]="Precio.invalid && Precio.touched"
                     #Precio="ngModel"
                     placeholder="Precio" aria-label="Precio"
-                    required minlength="6">
+                    required minlength="2">
           </div>
           <small *ngIf="Precio.invalid && Precio.touched" class="form-text text-danger mb-3">El precio debe ser obligatorio</small>
 
