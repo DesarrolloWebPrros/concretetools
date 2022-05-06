@@ -16,6 +16,7 @@ import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edi
 import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
 import { CreateDistribuidorComponent } from './Components/moduloDistribuidores/create-distribuidor/create-distribuidor.component';
 import { CreatePromocionComponent } from './Components/moduloPromociones/create-promocion/create-promocion.component';
+import { LoginComponent } from './Components/login/login.component';
 
 const routes: Routes = [
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'promociones'                   , pathMatch: 'full',  component: PromocionesComponent                    },
   { path: 'productos'                     , pathMatch: 'full',  component: ProductosComponent                      },
   { path: 'contact'                       , pathMatch: 'full',  component: ContactComponent                        },
+  { path: 'login'                         , pathMatch: 'full',  component: LoginComponent                          },
   { path: 'about'                         , pathMatch: 'full',  component: AboutComponent                          },
   { path: 'home'                          , pathMatch: 'full',  component: HomeComponent                           },
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                                    },
