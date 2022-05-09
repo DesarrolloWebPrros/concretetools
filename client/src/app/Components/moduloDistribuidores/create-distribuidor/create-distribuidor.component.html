@@ -17,10 +17,25 @@
             </select>
         </div> -->
     <form class="form-group row" style="width: 80%;"  #distribuidorForm="ngForm"  (ngSubmit)="guardar(distribuidorForm)">
-        <div class="input-group mb-3">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Clave</span>
+        </div>
+
+        <input type="text" [ngModel]="Distribuidor.Clave"
+                name="Clave" class="form-control"
+                #Clave="ngModel" [class.is-invalid]="Clave.invalid && Clave.touched"
+                placeholder="Clave del distribuidor"
+                aria-label="Distribuidor"
+                required minlength="5">
+      </div>
+        <small *ngIf="Clave.invalid && Clave.touched" class="form-text text-danger mb-3">La clave del distribuidor debe ser obligatorio y contener al menos 5 letras</small>
+
+      <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Nombre</span>
           </div>
+
           <input type="text" [ngModel]="Distribuidor.Nombre"
                   name="Nombre" class="form-control"
                   #nombre="ngModel" [class.is-invalid]="nombre.invalid && nombre.touched"
@@ -53,7 +68,7 @@
               #Email="ngModel" [class.is-invalid]="Email.invalid && Email.touched"
               placeholder="E-mail del distribuidor"
               aria-label="Email"
-              required minlength="5">
+              required minlength="@">
 </div>
 <small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio</small>
 
