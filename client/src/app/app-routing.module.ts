@@ -19,6 +19,14 @@ import { CreatePromocionComponent } from './Components/moduloPromociones/create-
 import { LoginComponent } from './Components/login/login.component';
 
 const routes: Routes = [
+  // Rutas para operaciones
+  { path: 'create-distribuidor'           , pathMatch: 'full',  component: CreateDistribuidorComponent             },
+  { path: 'create-promocion'              , pathMatch: 'full',  component: CreatePromocionComponent                },
+  { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent                 },
+  { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent               },
+  { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent                   },
+  { path: 'edit-promocion/:id'            , pathMatch: 'full',  component: EditPromocionComponent                  },
+  // paginas
   { path: 'admin-distribuidores-autorizados'    , pathMatch: 'full',  component: IndexDistribuidoresComponent      },
   { path: 'distribuidores-autorizados'    , pathMatch: 'full',  component: DistribuidoresComponent                 },
   { path: 'admin-promociones'             , pathMatch: 'full',  component: IndexPromocionesComponent               },
@@ -27,17 +35,10 @@ const routes: Routes = [
   { path: 'promociones'                   , pathMatch: 'full',  component: PromocionesComponent                    },
   { path: 'productos'                     , pathMatch: 'full',  component: ProductosComponent                      },
   { path: 'contact'                       , pathMatch: 'full',  component: ContactComponent                        },
-  { path: 'login'                         , pathMatch: 'full',  component: LoginComponent                          },
   { path: 'about'                         , pathMatch: 'full',  component: AboutComponent                          },
   { path: 'home'                          , pathMatch: 'full',  component: HomeComponent                           },
   { path: ''                              , redirectTo: 'home',pathMatch:'full'                                    },
-  // Rutas para operaciones
-  { path: 'create-distribuidor'           , pathMatch: 'full',  component: CreateDistribuidorComponent             },
-  { path: 'create-promocion'              , pathMatch: 'full',  component: CreatePromocionComponent                },
-  { path: 'create-producto'               , pathMatch: 'full',  component: CreateProductoComponent                 },
-  { path: 'edit-distribuidor/:id'         , pathMatch: 'full',  component: EditDistribuidorComponent               },
-  { path: 'edit-producto/:id'             , pathMatch: 'full',  component: EditProductoComponent                   },
-  { path: 'edit-promocion/:id'            , pathMatch: 'full',  component: EditPromocionComponent                  }
+  { path: '**'                            , redirectTo: 'home',pathMatch:'full'                                    }
 ];
 
 @NgModule({

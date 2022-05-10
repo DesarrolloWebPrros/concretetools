@@ -27,10 +27,6 @@ export class IndexPromocionesComponent implements OnInit {
     });
   }
 
-  openModalCreate = () => {
-    this.modalCreate = !this.modalCreate;
-  }
-
   newPromocion = ()=>{
     this.router.navigate(['create-promocion']);
   }
