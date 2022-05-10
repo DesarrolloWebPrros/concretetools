@@ -17,14 +17,24 @@
             </select>
         </div> -->
     <form class="form-group row" style="width: 80%;" #prodmocionForm="ngForm" (ngSubmit)="guardar(prodmocionForm)">
-        <div class="input-group mb-3">
+      <!-- <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+        </div>
+        <select [ngModel]="Promocion.Tipo" class="custom-select" id="inputGroupSelect01">
+          <option selected disabled>Elige una opción</option>
+          <option>Precio</option>
+          <option>Porcentaje</option>
+        </select>
+      </div>   -->
+      <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Tipo</span>
           </div>
           <input type="text" [ngModel]="Promocion.Tipo"
                   name="Tipo" class="form-control"
                   #Tipo="ngModel" [class.is-invalid]="Tipo.invalid && Tipo.touched"
-                  placeholder="Tipo del producto"
+                  placeholder="Tipo de la promoción"
                   aria-label="Tipo"
                   required minlength="5">
       </div>
@@ -40,13 +50,13 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Inicio</span>
         </div>
-        <input type="text" class="form-control" placeholder="Inicio" aria-label="Inicio">
+        <input type="date" class="form-control" placeholder="Inicio" aria-label="Inicio">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Fin</span>
         </div>
-        <input type="text" class="form-control" placeholder="Fin" aria-label="Fin">
+        <input type="date" class="form-control" placeholder="Fin" aria-label="Fin">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
