@@ -31,12 +31,14 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Tipo</span>
           </div>
-          <input type="text" [ngModel]="Promocion.Tipo"
+          <select [(ngModel)]="Promocion.Tipo"
                   name="Tipo" class="form-control"
                   #Tipo="ngModel" [class.is-invalid]="Tipo.invalid && Tipo.touched"
-                  placeholder="Tipo de la promoción"
-                  aria-label="Tipo"
                   required minlength="5">
+              <option disabled selected>Elige una opción</option>
+              <option>Precio</option>
+              <option>Porcentaje</option>
+          </select>
       </div>
       <small *ngIf="Tipo.invalid && Tipo.touched" class="form-text text-danger mb-3">El Tipo debe ser obligatorio y contener al menos 5 letras</small>
 
@@ -44,26 +46,56 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Producto</span>
           </div>
-          <input type="text" class="form-control" placeholder="Producto" aria-label="Producto">
+          <input type="text" [ngModel]="Promocion.Producto"
+                  name="Producto" class="form-control"
+                  #Producto="ngModel" [class.is-invalid]="Producto.invalid && Producto.touched"
+                  placeholder="Producto de la promoción"
+                  aria-label="Producto"
+                  required minlength="5">
       </div>
+      <small *ngIf="Producto.invalid && Producto.touched" class="form-text text-danger mb-3">El Producto debe ser obligatorio y contener al menos 5 letras</small>
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Inicio</span>
+          <span class="input-group-text" id="basic-addon1">Fecha inicial</span>
         </div>
-        <input type="date" class="form-control" placeholder="Inicio" aria-label="Inicio">
-      </div>
-      <div class="input-group mb-3">
+        <input type="date" [ngModel]="Promocion.Inicio"
+                  name="Inicio" class="form-control"
+                  #Inicio="ngModel" [class.is-invalid]="Inicio.invalid && Inicio.touched"
+                  placeholder="Inicio de la promoción"
+                  aria-label="Inicio"
+                  required minlength="5">
+      <!--</div>-->
+      <small *ngIf="Inicio.invalid && Inicio.touched" class="form-text text-danger mb-3">La fecha inicial debe ser obligatorio y contener al menos 5 letras</small>
+
+      <!--<div class="input-group mb-3">-->
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Fin</span>
+          <span class="input-group-text" id="basic-addon1">Fecha final</span>
         </div>
-        <input type="date" class="form-control" placeholder="Fin" aria-label="Fin">
+        <input type="date" [ngModel]="Promocion.Fin"
+                  name="Fin" class="form-control"
+                  #Fin="ngModel" [class.is-invalid]="Fin.invalid && Fin.touched"
+                  placeholder="Fin de la promoción"
+                  aria-label="Fin"
+                  required minlength="5">
       </div>
+      <small *ngIf="Fin.invalid && Fin.touched" class="form-text text-danger mb-3">La fecha final debe ser obligatorio y contener al menos 5 letras</small>
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Precio</span>
         </div>
-        <input type="text" class="form-control" placeholder="Precio" aria-label="precio">
+        <input type="number" [ngModel]="Promocion.Precio"
+                  name="Precio" class="form-control"
+                  step="0.01"
+                  min="0"
+                  #Precio="ngModel" [class.is-invalid]="Precio.invalid && Precio.touched"
+                  placeholder="Precio de la promoción"
+                  aria-label="Precio"
+                  required minlength="1">
       </div>
+      <small *ngIf="Precio.invalid && Precio.touched" class="form-text text-danger mb-3">El Precio debe ser obligatorio y mayor a 0</small>
+
       <div class="input-group mb-3">
         <div class="custom-file">
           <input type="file" class="custom-file-input" id="validatedCustomFile" >

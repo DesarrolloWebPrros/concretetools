@@ -74,7 +74,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Precio</span>
             </div>
-            <input type="text" [ngModel]="Producto.Precio"
+            <input type="number" [ngModel]="Producto.Precio"
                     name="Precio" class="form-control"
                     [class.is-invalid]="Precio.invalid && Precio.touched"
                     #Precio="ngModel"
