@@ -76,12 +76,14 @@
             </div>
             <input type="number" [ngModel]="Producto.Precio"
                     name="Precio" class="form-control"
-                    [class.is-invalid]="Precio.invalid && Precio.touched"
+                    step="0.01"
+                    min="0"
                     #Precio="ngModel"
+                    [class.is-invalid]="Precio.invalid && Precio.touched"
                     placeholder="Precio" aria-label="Precio"
-                    required minlength="2">
+                    required minlength="1">
           </div>
-          <small *ngIf="Precio.invalid && Precio.touched" class="form-text text-danger mb-3">El precio debe ser obligatorio</small>
+          <small *ngIf="Precio.invalid && Precio.touched" class="form-text text-danger mb-3">El Precio debe ser obligatorio y mayor a 0</small>
 
           <div class="input-group mb-3">
             <div class="custom-file">

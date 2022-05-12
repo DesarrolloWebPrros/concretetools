@@ -89,7 +89,8 @@
                   name="Precio" class="form-control"
                   step="0.01"
                   min="0"
-                  #Precio="ngModel" [class.is-invalid]="Precio.invalid && Precio.touched"
+                  #Precio="ngModel"
+                  [class.is-invalid]="Precio.invalid && Precio.touched"
                   placeholder="Precio de la promoción"
                   aria-label="Precio"
                   required minlength="1">
