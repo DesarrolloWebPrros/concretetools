@@ -21,7 +21,7 @@ export class ModalDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     this.objeto = this.objToDelete;
-    console.log(this.objeto);    
+    console.log(this.objeto);
   }
   closeAdvice = ( e:any ) => {
     this.openDeleteModal(e);
@@ -31,7 +31,31 @@ export class ModalDeleteComponent implements OnInit {
     (await this.Rest.del('http://localhost:3768/api/producto/'+this.objToDelete._id ))
     .subscribe( (result:any) => {
       console.log(`Result: `, result);
-      
+
+      this.response = result;
+      this.mensajes = result.message;
+
+      if (this.response.Error) {
+        this.error = true;
+      } else {
+        //this.partida = this.response.Registro;
+        this.error = false;
+        this.updateAll();
+
+        setTimeout(() => {
+          this.closeAdvice(e);
+          this.toast =false;
+        }, 5000);
+      }
+    });
+  }
+
+  submit1  = async( e:any ) => {
+    this.toast = true;
+    (await this.Rest.del('http://localhost:3768/api/distribuidores/'+this.objToDelete._id ))
+    .subscribe( (result:any) => {
+      console.log(`Result: `, result);
+
       this.response = result;
       this.mensajes = result.message;
 

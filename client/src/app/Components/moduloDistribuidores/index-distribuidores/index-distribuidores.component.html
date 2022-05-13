@@ -52,3 +52,9 @@
         </table>
     </div>
 </div>
+
+<app-modal-delete *ngIf="openModalDeleteBool"
+    [updateAll]="getDistribuidores"
+    [openDeleteModal]="openModalDelete"
+    [objToDelete]="distribuidorToDelete"
+></app-modal-delete>

@@ -89,12 +89,15 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Región</span>
         </div>
-        <input type="text" [ngModel]="Distribuidor.Region"
-        name="Region" class="form-control"
-        #Region="ngModel" [class.is-invalid]="Region.invalid && Region.touched"
-        placeholder="Región del distribuidor"
-        aria-label="Region"
-        required minlength="5">
+        <select [(ngModel)]="Distribuidor.Region"
+              name="Region" class="form-control"
+              #Region="ngModel" [class.is-invalid]="Region.invalid && Region.touched"
+              required minlength="5">
+              <option disabled selected>Elige una opción</option>
+              <option>Norte</option>
+              <option>Centro</option>
+              <option>Sur</option>
+        </select>
 </div>
 <small *ngIf="Region.invalid && Region.touched" class="form-text text-danger mb-3">El Región del distribuidor debe ser obligatoria</small>
 

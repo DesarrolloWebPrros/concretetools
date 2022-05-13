@@ -12,6 +12,8 @@ export class IndexDistribuidoresComponent implements OnInit {
 
   Distribuidores: Distribuidor[]=[];
   modalCreate:boolean = false;
+  openModalDeleteBool:boolean = false;
+  distribuidorToDelete:any;
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -41,8 +43,12 @@ export class IndexDistribuidoresComponent implements OnInit {
   }
 
   delete = (id:string) => {
-    console.log(`Id a eliminar es: `,id);
-
+    this.distribuidorToDelete = this.Distribuidores.find(P=>P._id === id);
+    console.log(`Id a eliminar es: `,this.distribuidorToDelete);
+    this.openModalDelete();
+  }
+  openModalDelete = () =>{
+    this.openModalDeleteBool = !this.openModalDeleteBool;
   }
 
 }
