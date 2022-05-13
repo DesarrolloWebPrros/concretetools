@@ -45,7 +45,7 @@
           </div>
           <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger mb-3">El nombre del distribuidor debe ser obligatorio y contener al menos 5 letras</small>
 
-      <div class="input-group mb-3">
+      <div class="input-group mb-3" action="15-html5-tel-input-demo2.php">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Telefóno</span>
           </div>
@@ -54,9 +54,9 @@
           #Telefono="ngModel" [class.is-invalid]="Telefono.invalid && Telefono.touched"
           placeholder="Telefóno del distribuidor"
           aria-label="Telefóno"
-          required minlength="5">
+          pattern="[0-9]{9}">
   </div>
-  <small *ngIf="Telefono.invalid && Telefono.touched" class="form-text text-danger mb-3">El telefóno del distribuidor debe ser obligatorio y contener 10 digitos</small>
+  <small *ngIf="Telefono.invalid && Telefono.touched" class="form-text text-danger mb-3">El telefóno contener 10 numeros</small>
 
 
       <div class="input-group mb-3">
@@ -68,9 +68,9 @@
               #Email="ngModel" [class.is-invalid]="Email.invalid && Email.touched"
               placeholder="E-mail del distribuidor"
               aria-label="Email"
-              required minlength="@">
+              pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
 </div>
-<small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio</small>
+<small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio y escrito con formato de e-mail</small>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
