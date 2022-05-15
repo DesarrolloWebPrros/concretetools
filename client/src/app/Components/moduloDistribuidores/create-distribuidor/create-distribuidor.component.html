@@ -69,21 +69,34 @@
               placeholder="E-mail del distribuidor"
               aria-label="Email"
               pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
-</div>
-<small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio y escrito con formato de e-mail</small>
+  </div>
+  <small *ngIf="Email.invalid && Email.touched" class="form-text text-danger mb-3">El E-mail debe ser obligatorio y escrito con formato de e-mail</small>
 
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Dirección</span>
-        </div>
-        <input type="text" [ngModel]="Distribuidor.Direccion"
-              name="Direccion" class="form-control"
-              #Direccion="ngModel" [class.is-invalid]="Direccion.invalid && Direccion.touched"
-              placeholder="Dirección del distribuidor"
-              aria-label="Direccion"
-              required minlength="5">
-</div>
-<small *ngIf="Direccion.invalid && Direccion.touched" class="form-text text-danger mb-3">El Dirección del distribuidor debe ser obligatoria</small>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Dirección</span>
+    </div>
+    <input type="text" [ngModel]="Distribuidor.Direccion"
+           name="Direccion" class="form-control"
+           #Direccion="ngModel" [class.is-invalid]="Direccion.invalid && Direccion.touched"
+           placeholder="Dirección del distribuidor"
+           aria-label="Direccion"
+           required minlength="5">
+  </div>
+  <small *ngIf="Direccion.invalid && Direccion.touched" class="form-text text-danger mb-3">El Dirección del distribuidor debe ser obligatoria</small>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Estado</span>
+    </div>
+    <input type="text" [ngModel]="Distribuidor.Estado"
+           name="Estado" class="form-control"
+           #Estado="ngModel" [class.is-invalid]="Estado.invalid && Estado.touched"
+           placeholder="Dirección del distribuidor"
+           aria-label="Estado"
+           required minlength="5">
+  </div>
+  <small *ngIf="Estado.invalid && Estado.touched" class="form-text text-danger mb-3">El Estado de residencia del distribuidor debe ser obligatoria</small>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">

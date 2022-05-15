@@ -8,6 +8,7 @@ const DistribuidorSchema = Schema({
     Telefono:       String,
     email:          String,
     Direccion:      String,
+    Estado:         String,
     Region:         String
 });
 

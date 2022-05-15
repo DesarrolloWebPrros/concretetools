@@ -15,6 +15,7 @@ export class CreateDistribuidorComponent implements OnInit {
       Nombre: '',
       Clave: '',
       Direccion: '',
+      Estado: '',
       Telefono: '',
       email: '',
       Imagen:'',
@@ -29,6 +30,7 @@ export class CreateDistribuidorComponent implements OnInit {
       Direccion: new FormControl('', [Validators.required]),
       Telefono: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
+      Estado: new FormControl('', [Validators.required]),
       Region: new FormControl('', [Validators.required]),
 
       file: new FormControl('', [Validators.required]),

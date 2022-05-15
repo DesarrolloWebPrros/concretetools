@@ -45,6 +45,7 @@ const save = (req, res) => {
     distribuidor.Telefono = params.descripcion;
     distribuidor.email = params.precio;
     distribuidor.Direccion = params.aplicaciones;
+    distribuidor.Estado = params.imagen;
     distribuidor.Region = params.imagen;
 
     distribuidor.save( (err, distribuidorStored ) => {
