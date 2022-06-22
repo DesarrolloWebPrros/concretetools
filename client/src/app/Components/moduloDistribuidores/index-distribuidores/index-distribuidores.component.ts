@@ -14,6 +14,8 @@ export class IndexDistribuidoresComponent implements OnInit {
   modalCreate:boolean = false;
   openModalDeleteBool:boolean = false;
   distribuidorToDelete:any;
+  DistribuidoresFiltered : Distribuidor[]= [];
+  isSearching:boolean = false;
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -24,6 +26,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   getDistribuidores = () => {
     this.Rest.get(`http://localhost:3768/api/distribuidores`).subscribe((respuesta:any) => {
       this.Distribuidores = respuesta.Distribuidores;
+      this.DistribuidoresFiltered = respuesta.Distribuidores;
       console.log(`Distribuidores =>>>`,respuesta);
     });
   }
@@ -37,6 +40,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   }
 
   edit = (id:string) => {
+
     console.log(`Id a editar es: `,id);
     this.router.navigate(['edit-distribuidor', id]);
 
@@ -47,8 +51,25 @@ export class IndexDistribuidoresComponent implements OnInit {
     console.log(`Id a eliminar es: `,this.distribuidorToDelete);
     this.openModalDelete();
   }
+
+
+
   openModalDelete = () =>{
     this.openModalDeleteBool = !this.openModalDeleteBool;
   }
+  search = (filter: string) => {
 
+    if (filter.length > 0) {
+      this.isSearching = true;
+      filter = filter.toLocaleLowerCase();
+
+
+      this.DistribuidoresFiltered = this.Distribuidores.filter( P => P.Nombre.toLocaleLowerCase().includes(filter) );
+
+    }  else {
+
+      this.isSearching = false;
+
+    }
+  }
 }

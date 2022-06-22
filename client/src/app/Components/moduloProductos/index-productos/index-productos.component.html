@@ -41,13 +41,13 @@
                                   <button type="button" (click)="edit(producto._id)" class="btn btn-primary">Editar</button>
                                   <button type="button" (click)="delete(producto._id)" class="btn btn-danger">Eliminar</button>
                               </ng-container>
-                            </div>                          
+                            </div>
                         </td>
                         </tr>
-                    </ng-container>            
+                    </ng-container>
 
                   </ng-container>
-                  
+
                   <ng-container *ngIf="isSearching">
                     <ng-container  *ngFor="let producto of ProductosFiltered">
                         <tr>
@@ -61,10 +61,10 @@
                                   <button type="button" (click)="edit(producto._id)" class="btn btn-primary">Editar</button>
                                   <button type="button" (click)="delete(producto._id)" class="btn btn-danger">Eliminar</button>
                               </ng-container>
-                            </div>                          
+                            </div>
                         </td>
                         </tr>
-                    </ng-container>            
+                    </ng-container>
 
                   </ng-container>
               </tbody>
@@ -74,7 +74,7 @@
     </div>
 </div>
 <app-modal-delete *ngIf="openModalDeleteBool"
-[updateAll]="getProductos"
-[openDeleteModal]="openModalDelete"
-[objToDelete]="productoToDelete"
+  [updateAll]="getProductos"
+  [openDeleteModal]="openModalDelete"
+  [objToDelete]="productoToDelete"
 ></app-modal-delete>

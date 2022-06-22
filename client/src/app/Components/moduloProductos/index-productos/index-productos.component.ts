@@ -32,14 +32,14 @@ export class IndexProductosComponent implements OnInit {
   }
   newProducto = ()=>{
     this.router.navigate(['create-producto']);
-   
+
   }
 
   edit = (id:string) => {
-    
+
     console.log(`Id a editar es: `,id);
     this.router.navigate(['edit-producto', id]);
-    
+
   }
 
   delete = (id:string) => {
@@ -47,6 +47,7 @@ export class IndexProductosComponent implements OnInit {
     console.log(`Id a eliminar es: `,this.productoToDelete);
     this.openModalDelete();
   }
+
   openModalDelete = () =>{
     this.openModalDeleteBool = !this.openModalDeleteBool;
   }
@@ -56,9 +57,9 @@ export class IndexProductosComponent implements OnInit {
       this.isSearching = true;
       filter = filter.toLocaleLowerCase();
 
-      
+
       this.ProductosFiltered = this.Productos.filter( P => P.Nombre.toLocaleLowerCase().includes(filter) );
-   
+
     }  else {
 
       this.isSearching = false;

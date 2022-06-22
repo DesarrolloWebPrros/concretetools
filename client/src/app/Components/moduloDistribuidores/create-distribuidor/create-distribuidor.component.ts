@@ -12,24 +12,26 @@ export class CreateDistribuidorComponent implements OnInit {
 
 
     Distribuidor:Distribuidor={
-      Nombre: '',
+
       Clave: '',
-      Direccion: '',
-      Estado: '',
+      Nombre: '',
       Telefono: '',
       email: '',
-      Imagen:'',
-      Region:''
+      Direccion: '',
+      Estado: '',
+      Region:'',
+      Imagen:''
+
     };
     imageSrc: string='';
 
     myForm = new FormGroup({
 
-      Nombre: new FormControl('', [Validators.required, Validators.minLength(5)]),
       Clave: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      Direccion: new FormControl('', [Validators.required]),
+      Nombre: new FormControl('', [Validators.required, Validators.minLength(5)]),
       Telefono: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
+      Direccion: new FormControl('', [Validators.required]),
       Estado: new FormControl('', [Validators.required]),
       Region: new FormControl('', [Validators.required]),
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RestService } from 'src/app/services/rest.service';
 import { Distribuidor } from '../../interfaces/Prototipos';
@@ -16,8 +16,9 @@ export class EditDistribuidorComponent implements OnInit {
   showPhoto:boolean=true;
 
   constructor(
-    private activatedRoute: ActivatedRoute, 
-    private Rest: RestService) { }
+    private activatedRoute: ActivatedRoute,
+    private Rest: RestService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
@@ -27,10 +28,20 @@ export class EditDistribuidorComponent implements OnInit {
       this.DistribuidorObservable = this.Rest.get(url);
       this.DistribuidorObservable.subscribe( element =>{
         console.log(element);
-        
+
         this.Distribuidor=element.Distribuidor;
       });
     });
+  }
+
+  actualizarDistribuidor = () => {
+    this.Rest.put('http://localhost:3768/api/Distribuidores/'+this.Distribuidor._id, this.Distribuidor)
+
+    .subscribe(res => {
+      console.log(res);
+      alert('Actualizado correctamente.');
+      this.router.navigate(['admin-distribuidores-autorizados']);
+  });
   }
 
   eliminarFoto = () => {
