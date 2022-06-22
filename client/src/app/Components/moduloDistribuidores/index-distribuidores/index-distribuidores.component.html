@@ -15,7 +15,7 @@
 </app-create-distribuidor-->
 <div class="container overflow-auto"  style="height: 650px;">
     <div class="row justify-content-md-center">
-        <table class="table table-hover" data-sticky-header="true" face="Arial">
+        <table class="table table-hover" data-sticky-header="true">
             <thead class="thead-dark" >
               <tr >
                 <th scope="col">Clave</th>
@@ -30,7 +30,7 @@
             </thead>
             <tbody>
 
-                <ng-container *ngFor="let distribuidor of Distribuidores">
+                <ng-container *ngFor="let distribuidor of Distribuidores" >
                     <tr>
                       <th scope="row"> {{ distribuidor.Clave }} </th>
                       <td>{{ distribuidor.Nombre }}</td>
