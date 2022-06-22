@@ -54,11 +54,11 @@ const save = (req, res) => {
 }
 
 const update = (req, res) => {
-    const productoId = req.params.id;
+    const filter = { _id: req.params.id };
     let update = req.body;
-    console.log(`Update de llegada: `, update);
+
     update.Precio = Number(update.Precio);
-    Producto.findOneAndUpdate( productoId, update, (err, productoUpdated ) => {
+    Producto.findOneAndUpdate( filter, update, (err, productoUpdated ) => {
         if (err) {
             res.status(500).send({message: `Error al actualizar Producto ${productoId}`}); 
         } else {

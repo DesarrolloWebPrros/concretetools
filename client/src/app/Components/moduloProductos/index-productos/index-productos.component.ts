@@ -14,6 +14,8 @@ export class IndexProductosComponent implements OnInit {
   modalCreate:boolean = false;
   openModalDeleteBool:boolean = false;
   productoToDelete:any;
+  ProductosFiltered : Producto[]= [];
+  isSearching:boolean = false;
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -24,6 +26,7 @@ export class IndexProductosComponent implements OnInit {
   getProductos = () => {
     this.Rest.get(`http://localhost:3768/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
+      this.ProductosFiltered = respuesta.Productos;
       console.log(`Productos =>>>`,respuesta);
     });
   }
@@ -46,6 +49,21 @@ export class IndexProductosComponent implements OnInit {
   }
   openModalDelete = () =>{
     this.openModalDeleteBool = !this.openModalDeleteBool;
+  }
+  search = (filter: string) => {
+
+    if (filter.length > 0) {
+      this.isSearching = true;
+      filter = filter.toLocaleLowerCase();
+
+      
+      this.ProductosFiltered = this.Productos.filter( P => P.Nombre.toLocaleLowerCase().includes(filter) );
+   
+    }  else {
+
+      this.isSearching = false;
+
+    }
   }
 
 }

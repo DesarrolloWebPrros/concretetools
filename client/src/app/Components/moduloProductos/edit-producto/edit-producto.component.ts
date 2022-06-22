@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RestService } from 'src/app/services/rest.service';
 import { Producto } from '../../interfaces/Prototipos';
@@ -17,7 +17,8 @@ export class EditProductoComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private Rest: RestService) { }
+    private Rest: RestService, 
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
@@ -40,7 +41,7 @@ export class EditProductoComponent implements OnInit {
     .subscribe(res => {
       console.log(res);
       alert('Actualizado correctamente.');
-
+      this.router.navigate(['admin-productos']);
   });
   }
 
