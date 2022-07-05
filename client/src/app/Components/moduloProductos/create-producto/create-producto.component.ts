@@ -50,9 +50,9 @@ export class CreateProductoComponent implements OnInit {
 
       .subscribe(res => {
 
-        console.log(res);
+      console.log(res);
 
-        alert('Uploaded Successfully.');
+      alert('Uploaded Successfully.');
 
     });
   }

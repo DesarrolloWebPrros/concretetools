@@ -10,7 +10,7 @@
     text-align: center;
     background-color: #fff;
     cursor: pointer;
-    
+
 }
 .precio {
     font-size: 15rem;
@@ -33,11 +33,11 @@
     width: 10px;
     height: 10px;
 }
-  
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     background: #444;
 }

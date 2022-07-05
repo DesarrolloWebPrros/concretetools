@@ -10,7 +10,6 @@ import { Distribuidor } from '../../interfaces/Prototipos';
 })
 export class CreateDistribuidorComponent implements OnInit {
 
-
     Distribuidor:Distribuidor={
 
       Clave: '',
@@ -74,9 +73,9 @@ export class CreateDistribuidorComponent implements OnInit {
 
       .subscribe(res => {
 
-        console.log(res);
+      console.log(res);
 
-        alert('Uploaded Successfully.');
+      alert('Uploaded Successfully.');
 
     });
       // validar respuesta (Redireccionas o marcas error en form)

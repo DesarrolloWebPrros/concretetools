@@ -9053,6 +9053,7 @@ textarea.form-control {
 .footer {
   background: #111111;
   position: relative;
+  background-size: 100% 50%;
   z-index: 0;
   overflow: hidden; }
   .footer a {
