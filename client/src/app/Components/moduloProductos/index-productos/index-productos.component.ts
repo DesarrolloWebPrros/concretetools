@@ -16,6 +16,7 @@ export class IndexProductosComponent implements OnInit {
   productoToDelete:any;
   ProductosFiltered : Producto[]= [];
   isSearching:boolean = false;
+  URL:string = 'http://localhost:3768/api/producto/'; 
 
   constructor(private Rest: RestService, private router: Router) { }
 

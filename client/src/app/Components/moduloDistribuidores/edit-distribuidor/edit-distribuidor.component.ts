@@ -35,7 +35,7 @@ export class EditDistribuidorComponent implements OnInit {
   }
 
   actualizarDistribuidor = () => {
-    this.Rest.put('http://localhost:3768/api/Distribuidores/'+this.Distribuidor._id, this.Distribuidor)
+    this.Rest.put('http://localhost:3768/api/distribuidor/'+this.Distribuidor._id, this.Distribuidor)
 
     .subscribe(res => {
       console.log(res);

@@ -20,6 +20,7 @@ api.put('/promociones/:id', PromocionController.update);
 api.get('/distribuidores', DistribuidorController.index);
 api.get('/distribuidor/:id', DistribuidorController.show);
 api.post('/distribuidor', DistribuidorController.save);
-api.put('/distribuidores/:id', DistribuidorController.update);
+api.put('/distribuidor/:id', DistribuidorController.update);
+api.delete('/distribuidor/:id', DistribuidorController.deleteDist);
 
 module.exports = api;

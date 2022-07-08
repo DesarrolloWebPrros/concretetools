@@ -40,13 +40,14 @@ const save = (req, res) => {
 
     const params = req.body;
 
-    distribuidor.Nombre = params.nombre;
-    distribuidor.Clave = params.clave;
-    distribuidor.Telefono = params.descripcion;
-    distribuidor.email = params.precio;
-    distribuidor.Direccion = params.aplicaciones;
-    distribuidor.Estado = params.imagen;
-    distribuidor.Region = params.imagen;
+    distribuidor.Nombre = params.Nombre;
+    distribuidor.Clave = params.Clave;
+    distribuidor.Telefono = params.Telefono;
+    distribuidor.email = params.email;
+    distribuidor.Direccion = params.Direccion;
+    distribuidor.Estado = params.Estado;
+    distribuidor.Region = params.Region;
+
 
     distribuidor.save( (err, distribuidorStored ) => {
         if (err) {
@@ -59,11 +60,12 @@ const save = (req, res) => {
 
 const update = (req, res) => {
     const distribuidorId = req.params.id;
-    const update = req.body;
+    let update = req.body;
+    delete update._id;
 
     Distribuidor.findOneAndUpdate( distribuidorId, update, (err, distribuidorUpdated ) => {
         if (err) {
-            res.status(500).send({message: `Error al actualizar Distribuidor ${distribuidorId}`}); 
+            res.status(500).send({message: `Error al actualizar distribuidor ${distribuidorId}`}); 
         } else {
             res.status(200).send( distribuidorUpdated );
         }
@@ -71,4 +73,25 @@ const update = (req, res) => {
 
 }
 
-module.exports = { index, show, save, update }
+const deleteDist = (req, res) => {
+    var distribuidorId = req.params.id;
+
+    Distribuidor.findById(distribuidorId, (err, distribuidor) => {
+        if (err) {
+            res.status(500).send({ message: ['Error al devolver el distribuidor'], error: true });
+        } else {
+            if (!distribuidor) {
+                res.status(404).send({ message: ['No existe el distribuidor'], error: true });
+            } else {
+                distribuidor.remove(err => {
+                    if(err){
+                        res.status(500).send({message: ['El distribuidor no ha podido ser eliminado'], error: true });
+                    } else {
+                        res.status(200).send({message: ['El distribuidor ha sido eliminado exitosamente'], error: false });
+                    }
+                 });
+            }
+        }
+    });
+ }
+module.exports = { index, show, save, update, deleteDist }
