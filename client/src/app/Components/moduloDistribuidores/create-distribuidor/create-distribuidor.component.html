@@ -54,7 +54,7 @@
           #Telefono="ngModel" [class.is-invalid]="Telefono.invalid && Telefono.touched"
           placeholder="Telefóno del distribuidor"
           aria-label="Telefóno"
-          pattern="[0-9]{9}">
+          pattern="[0-9]{10}">
   </div>
   <small *ngIf="Telefono.invalid && Telefono.touched" class="form-text text-danger mb-3">El telefóno contener 10 numeros</small>
 
@@ -83,20 +83,52 @@
            aria-label="Direccion"
            required minlength="5">
   </div>
-  <small *ngIf="Direccion.invalid && Direccion.touched" class="form-text text-danger mb-3">El Dirección del distribuidor debe ser obligatoria</small>
+  <small *ngIf="Direccion.invalid && Direccion.touched" class="form-text text-danger mb-3">La Dirección del distribuidor debe ser obligatoria</small>
 
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">Estado</span>
     </div>
-    <input type="text" [ngModel]="Distribuidor.Estado"
-           name="Estado" class="form-control"
-           #Estado="ngModel" [class.is-invalid]="Estado.invalid && Estado.touched"
-           placeholder="Dirección del distribuidor"
-           aria-label="Estado"
-           required minlength="5">
+    <select [(ngModel)]="Distribuidor.Estado"
+      name="Estado" class="form-control"
+      #Estado="ngModel" [class.is-invalid]="Estado.invalid && Estado.touched"
+      required minlength="5">
+      <option disabled selected>Elige una opción</option>
+      <option>AGUASCALIENTES</option>
+      <option>BAJA CALIFORNIA</option>
+      <option>BAJA CALIFORNIA SUR</option>
+      <option>CAMPECHE</option>
+      <option>CHIAPAS</option>
+      <option>CHIHUAHUA</option>
+      <option>CIUDAD DE MÉXICO</option>
+      <option>COAHUILA</option>
+      <option>COLIMA</option>
+      <option>DURANGO</option>
+      <option>GUANAJUATO</option>
+      <option>GUERRERO</option>
+      <option>HIDALGO</option>
+      <option>JALISCO</option>
+      <option>EDO MÉXICO</option>
+      <option>MICHOACÁN</option>
+      <option>MORELOS</option>
+      <option>NAYARIT</option>
+      <option>NUEVO LEÓN</option>
+      <option>OAXACA</option>
+      <option>PUEBLA</option>
+      <option>QUERÉTARO</option>
+      <option>QUINTANA ROO</option>
+      <option>SAN LUIS POTOSÍ</option>
+      <option>SINALOA</option>
+      <option>SONORA</option>
+      <option>TABASCO</option>
+      <option>TAMAULIPAS</option>
+      <option>TLAXCALA</option>
+      <option>VERACRUZ</option>
+      <option>YUCATÁN</option>
+      <option>ZACATECAS</option>
+    </select>
   </div>
-  <small *ngIf="Estado.invalid && Estado.touched" class="form-text text-danger mb-3">El Estado de residencia del distribuidor debe ser obligatoria</small>
+  <small *ngIf="Estado.invalid && Estado.touched" class="form-text text-danger mb-3">Se debe elegir el Estado de residencia del distribuidor de manera obligatoria</small>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -107,12 +139,12 @@
               #Region="ngModel" [class.is-invalid]="Region.invalid && Region.touched"
               required minlength="5">
               <option disabled selected>Elige una opción</option>
-              <option>Norte</option>
-              <option>Centro</option>
-              <option>Sur</option>
+              <option>NORTE</option>
+              <option>CENTRO</option>
+              <option>SUR</option>
         </select>
 </div>
-<small *ngIf="Region.invalid && Region.touched" class="form-text text-danger mb-3">El Región del distribuidor debe ser obligatoria</small>
+<small *ngIf="Region.invalid && Region.touched" class="form-text text-danger mb-3">Se debe elegir la Región del distribuidor de manera obligatoria</small>
 
       <div class="input-group mb-3">
         <div class="custom-file">

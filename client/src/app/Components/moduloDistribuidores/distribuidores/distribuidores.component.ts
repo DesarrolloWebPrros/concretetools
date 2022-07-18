@@ -20,7 +20,7 @@ export class DistribuidoresComponent implements OnInit {
       this.Distribuidores = respuesta.Distribuidores;
       console.log(`Distribuidores =>>>`,respuesta);
     });
-    
+
   }
 
 }

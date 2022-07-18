@@ -94,4 +94,32 @@ const deleteDist = (req, res) => {
         }
     });
  }
+
 module.exports = { index, show, save, update, deleteDist }
+
+const buscarNorte = async () => {
+    const post = await Distribuidor.find({
+        Region:'NORTE'
+    })
+    console.log('***** Resultados de Norte *****', post);
+}
+
+buscarNorte()
+
+const buscarCentro = async () => {
+    const post = await Distribuidor.find({
+        Region:'CENTRO'
+    })
+    console.log('***** Resultados de Centro *****', post);
+}
+
+buscarCentro()
+
+const buscarSur = async () => {
+    const post = await Distribuidor.find({
+        Region:'SUR'
+    })
+    console.log('***** Resultados de Sur *****', post);
+}
+
+buscarSur()

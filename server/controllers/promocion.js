@@ -43,12 +43,12 @@ const save = (req, res) => {
     
     const params = req.body;
 
-    promocion.Nombre = params.nombre;
-    promocion.Clave = params.clave;
-    promocion.Descripcion = params.descripcion;
-    promocion.Inicio = params.inicio;
-    promocion.Fin = params.fin;
-    promocion.Imagen = params.imagen;
+    promocion.Nombre = params.Nombre;
+    promocion.Clave = params.Clave;
+    promocion.Descripcion = params.Descripcion;
+    promocion.Inicio = params.Inicio;
+    promocion.Fin = params.Fin;
+    promocion.Imagen = params.Imagen;
 
     promocion.save( (err, promocionStored ) => {
         if (err) {

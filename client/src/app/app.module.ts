@@ -24,6 +24,7 @@ import { EditDistribuidorComponent } from './Components/moduloDistribuidores/edi
 import { EditPromocionComponent } from './Components/moduloPromociones/edit-promocion/edit-promocion.component';
 import { ModalDeleteComponent } from './Components/layouts/modal-delete/modal-delete.component';
 import { LoginComponent } from './Components/login/login.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { LoginComponent } from './Components/login/login.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,7 +20,7 @@
           <table class="table table-hover" data-sticky-header="true">
               <thead class="thead-dark" >
                 <tr >
-                  <th scope="col">Clave</th>
+
                   <th scope="col">Nombre</th>
                   <th scope="col">Telefono</th>
                   <th scope="col">E-Mail</th>
@@ -34,8 +34,8 @@
                 <ng-container *ngIf="!isSearching"></ng-container>
                   <ng-container *ngFor="let distribuidor of Distribuidores" >
                       <tr>
-                        <th scope="row"> {{ distribuidor.Clave }} </th>
-                        <td>{{ distribuidor.Nombre }}</td>
+                        <th scope="row"> {{ distribuidor.Nombre }} </th>
+
                         <td>{{ distribuidor.Telefono }}</td>
                         <td>{{ distribuidor.email }}</td>
                         <td>{{ distribuidor.Direccion }}</td>
@@ -52,11 +52,11 @@
                       </tr>
                   </ng-container>
 
-                <ng-container *ngIf="!isSearching">
+                <ng-container *ngIf="isSearching">
                   <ng-container *ngFor="let distribuidor of DistribuidoresFiltered" >
                       <tr>
-                        <th scope="row"> {{ distribuidor.Clave }} </th>
-                        <td>{{ distribuidor.Nombre }}</td>
+                        <th scope="row"> {{ distribuidor.Nombre }} </th>
+
                         <td>{{ distribuidor.Telefono }}</td>
                         <td>{{ distribuidor.email }}</td>
                         <td>{{ distribuidor.Direccion }}</td>

@@ -53,9 +53,60 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Estado</span>
+            </div>
+            <select [(ngModel)]="Distribuidor.Estado"
+              name="Estado" class="form-control"
+              #Estado="ngModel" [class.is-invalid]="Estado.invalid && Estado.touched"
+              required minlength="5">
+              <option disabled selected>Elige una opción</option>
+              <option>AGUASCALIENTES</option>
+              <option>BAJA CALIFORNIA</option>
+              <option>BAJA CALIFORNIA SUR</option>
+              <option>CAMPECHE</option>
+              <option>CHIAPAS</option>
+              <option>CHIHUAHUA</option>
+              <option>CIUDAD DE MÉXICO</option>
+              <option>COAHUILA</option>
+              <option>COLIMA</option>
+              <option>DURANGO</option>
+              <option>GUANAJUATO</option>
+              <option>GUERRERO</option>
+              <option>HIDALGO</option>
+              <option>JALISCO</option>
+              <option>EDO MÉXICO</option>
+              <option>MICHOACÁN</option>
+              <option>MORELOS</option>
+              <option>NAYARIT</option>
+              <option>NUEVO LEÓN</option>
+              <option>OAXACA</option>
+              <option>PUEBLA</option>
+              <option>QUERÉTARO</option>
+              <option>QUINTANA ROO</option>
+              <option>SAN LUIS POTOSÍ</option>
+              <option>SINALOA</option>
+              <option>SONORA</option>
+              <option>TABASCO</option>
+              <option>TAMAULIPAS</option>
+              <option>TLAXCALA</option>
+              <option>VERACRUZ</option>
+              <option>YUCATÁN</option>
+              <option>ZACATECAS</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Región</span>
             </div>
-            <input [(ngModel)]="Distribuidor.Region" type="text" class="form-control" placeholder="Región" aria-label="precio">
+            <select [(ngModel)]="Distribuidor.Region"
+              name="Region" class="form-control"
+              #Region="ngModel" [class.is-invalid]="Region.invalid && Region.touched"
+              required minlength="5">
+              <option disabled selected>Elige una opción</option>
+              <option>NORTE</option>
+              <option>CENTRO</option>
+              <option>SUR</option>
+            </select>
           </div>
           <div class="input-group" *ngIf="showPhoto">
               <button class="btn btn-danger" (click)="eliminarFoto()">x</button>

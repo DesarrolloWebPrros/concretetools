@@ -72,9 +72,9 @@ export class CreatePromocionComponent implements OnInit {
 
       alert('Uploaded Successfully.');
 
-  });
-  // validar respuesta (Redireccionas o marcas error en form)
-}
+    });
+    // validar respuesta (Redireccionas o marcas error en form)
+  }
 
   onFileChange(event:any) {
 
