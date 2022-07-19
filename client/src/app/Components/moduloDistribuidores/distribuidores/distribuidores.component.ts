@@ -8,19 +8,29 @@ import { RestService } from 'src/app/services/rest.service';
 })
 export class DistribuidoresComponent implements OnInit {
   Distribuidores: any;
+  DistribuidoresFiltered: any;
 
+  region:string = "";
+  regiones:string[]= ["CENTRO", "SUR", "NORTE"];
   constructor(private Rest: RestService) { }
 
-  ngOnInit(): void {
-    this.getDistribuidores();
+  async ngOnInit(): Promise<void> {
+    await this.getDistribuidores();
+    setTimeout(() => {
+      this.region = "CENTRO";
+      this.filterByRegion();
+    }, 500);
   }
 
-  getDistribuidores = () => {
-    this.Rest.get(`http://localhost:3768/api/distribuidores`).subscribe((respuesta:any) => {
+  getDistribuidores = async() => {
+    await this.Rest.get(`http://localhost:3768/api/distribuidores`).subscribe((respuesta:any) => {
       this.Distribuidores = respuesta.Distribuidores;
-      console.log(`Distribuidores =>>>`,respuesta);
+      //console.log(`Distribuidores =>>>`,respuesta);
     });
-
   }
 
+  filterByRegion = () => {
+    this.DistribuidoresFiltered = this.Distribuidores.filter((D:any)=>D.Region === this.region);
+    //console.log(this.DistribuidoresFiltered);    
+  }
 }

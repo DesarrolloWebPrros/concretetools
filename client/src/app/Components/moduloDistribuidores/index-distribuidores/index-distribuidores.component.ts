@@ -16,6 +16,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   distribuidorToDelete:any;
   DistribuidoresFiltered : Distribuidor[]= [];
   isSearching:boolean = false;
+
   URL:string = 'http://localhost:3768/api/distribuidor/'; 
 
   constructor(private Rest: RestService, private router: Router) { }

@@ -97,7 +97,7 @@ const deleteDist = (req, res) => {
 
 module.exports = { index, show, save, update, deleteDist }
 
-const buscarNorte = async () => {
+/* const buscarNorte = async () => {
     const post = await Distribuidor.find({
         Region:'NORTE'
     })
@@ -122,4 +122,4 @@ const buscarSur = async () => {
     console.log('***** Resultados de Sur *****', post);
 }
 
-buscarSur()
+buscarSur() */
