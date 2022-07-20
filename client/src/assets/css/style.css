@@ -3818,11 +3818,30 @@ input[type="button"].btn-block {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
 
+.tarjeta {
+  width: 430px;
+  height: 530px;
+  border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.tarjeta:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+
 .card-body {
+
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem; }
+
 
 .card-title {
   margin-bottom: 0.75rem; }
