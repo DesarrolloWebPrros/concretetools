@@ -2,7 +2,7 @@
 
 let mongoose = require('mongoose');
 let app = require('./app');
-const PORT = 3768;
+const PORT = process.env.PORT || 3678;
 
 mongoose.connect('mongodb+srv://Christian:Elcristo1@webapis.qpe1i.mongodb.net/Concretetools?retryWrites=true&w=majority', (err, res) => {
     if (err) {
