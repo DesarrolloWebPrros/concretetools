@@ -13,21 +13,21 @@
   </div>
   <br>
 <ng-container *ngIf="Producto">
-  <div class="row mx-auto">
-    <div class="col-md-7">
+  <div class="row mx-auto mt-9">
+    <div class="col-md-5 offset-md-1">
       <a href="productos">
         <button class="btn btn-secondary">Volver</button>                  
       </a>
         <div class="imagen-producto text-dark mb-7">
           <div class="card-body">
             <div class="text-center">
-              <img src="{{ 'assets/Productos/'+ Producto.Clave +'.jpg' }}" class="rounded" style="width:100%" alt="{{ Producto.Nombre }}">
+              <img src="{{ 'assets/Productos/'+ Producto.Clave +'.jpg' }}" class="rounded" style="width:80%" alt="{{ Producto.Nombre }}">
             </div>            
           </div>
         </div>
     </div>
-    <div class="col-md-5">
-      <div class="tarjeta">
+    <div class="col-md-4 ">
+      <div class="tarjeta-producto">
         <div class="card-header text-dark mayusculas">
           <h1> {{ Producto.Nombre}} </h1>
         </div>
@@ -56,28 +56,27 @@
 </ng-container>
 <ng-container *ngIf="!Producto">
   <div class="row mx-auto">
-    <div class="col-md-7">
-      <div class="col-md-7">
-        <a href="productos">
-          <button class="btn btn-secondary">Volver</button>                  
-        </a>
-          <div class="imagen-producto text-dark mb-7">
-            <div class="card-body">
-              <div class="text-center">
-                <img src="{{ 'assets/images/notFound.jpg' }}" class="rounded" style="width:800px" alt="{{ Producto.Nombre }}">
-              </div>            
-            </div>
+    <div class="col-md-5 offset-md-1">
+      <a href="productos">
+        <button class="btn btn-secondary">Volver</button>                  
+      </a>
+        <div class="imagen-producto text-dark mb-7">
+          <div class="card-body">
+            <div class="text-center">
+              <img src="{{ 'assets/images/notFound.jpg' }}" class="rounded" style="width:800px" alt="{{ Producto.Nombre }}">
+            </div>            
           </div>
-      </div>
+        </div>
     </div>
-    <div class="col-md-5">
-      <div class="tarjeta">
+    <div class="col-md-4">
+      <div class="tarjeta-producto">
         <div class="card-header text-dark mayusculas">
-          <h1> Producto no encontrado <small>estas chavo, chavo</small> </h1>
+          <h1> Producto no encontrado  </h1>
         </div>
       </div>
     </div>
   </div>
 </ng-container>
-
+<br>
+<br>
 
