@@ -1,10 +1,13 @@
 'use strict'
+require('dotenv').config({path:__dirname+'/.env'});
 
 let mongoose = require('mongoose');
 let app = require('./app');
 const PORT = process.env.PORT || 3678;
+const URL_DB = process.env.DB_CLOUD_URL || '';
 
-mongoose.connect('mongodb+srv://Christian:Elcristo1@webapis.qpe1i.mongodb.net/Concretetools?retryWrites=true&w=majority', (err, res) => {
+
+mongoose.connect(URL_DB, (err, res) => {
     if (err) {
         throw err;
     } else {
