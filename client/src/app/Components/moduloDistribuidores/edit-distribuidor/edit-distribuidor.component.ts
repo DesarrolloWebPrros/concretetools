@@ -22,7 +22,7 @@ export class EditDistribuidorComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
-      const url:string = 'http://localhost:3768/api/distribuidor/'+params["id"];
+      const url:string = 'https://api-concretetools.herokuapp.com/api/distribuidor/'+params["id"];
       console.log(url);
 
       this.DistribuidorObservable = this.Rest.get(url);

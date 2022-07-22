@@ -16,7 +16,7 @@ export class IndexProductosComponent implements OnInit {
   productoToDelete:any;
   ProductosFiltered : Producto[]= [];
   isSearching:boolean = false;
-  URL:string = 'http://localhost:3768/api/producto/'; 
+  URL:string = 'https://api-concretetools.herokuapp.com/api/productos/'; 
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -25,7 +25,7 @@ export class IndexProductosComponent implements OnInit {
   }
 
   getProductos = () => {
-    this.Rest.get(`http://localhost:3768/api/productos`).subscribe((respuesta:any) => {
+    this.Rest.get(`https://api-concretetools.herokuapp.com/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
       this.ProductosFiltered = respuesta.Productos;
       console.log(`Productos =>>>`,respuesta);

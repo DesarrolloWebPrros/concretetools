@@ -18,7 +18,7 @@ export class ProductoComponent implements OnInit {
     private Rest: RestService) {
 
     this.activatedRoute.params.subscribe( params => {
-      const url:string = 'http://localhost:3768/api/producto/'+params["id"];
+      const url:string = 'https://api-concretetools.herokuapp.com/api/producto/'+params["id"];
       console.log(url);
 
       this.ProductoObservable = this.Rest.get(url);

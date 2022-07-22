@@ -21,7 +21,7 @@ export class EditPromocionComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
-      const url:string = 'http://localhost:3768/api/promocion/'+params["id"];
+      const url:string = 'https://api-concretetools.herokuapp.com/api/promocion/'+params["id"];
       console.log(url);
 
       this.PromocionObservable = this.Rest.get(url);

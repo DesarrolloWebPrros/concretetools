@@ -23,7 +23,7 @@ export class DistribuidoresComponent implements OnInit {
   }
 
   getDistribuidores = async() => {
-    await this.Rest.get(`http://localhost:3768/api/distribuidores`).subscribe((respuesta:any) => {
+    await this.Rest.get(`https://api-concretetools.herokuapp.com/api/distribuidores`).subscribe((respuesta:any) => {
       this.Distribuidores = respuesta.Distribuidores;
       //console.log(`Distribuidores =>>>`,respuesta);
     });

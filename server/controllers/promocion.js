@@ -7,7 +7,7 @@ const index = (req, res) => {
         if (err) {
             res.status(500).send({message: 'Error al leer coleccion de Promociones'});
         } else {
-            console.log(promociones);
+            //console.log(promociones);
             if (!promociones) {
                 res.status(404).send({message: 'No se encontro ningun promoción'});
             } else {
@@ -23,7 +23,7 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     const promocionId = req.params.id;
-    console.log(promocionId);
+    //console.log(promocionId);
     Promocion.findById(promocionId, (err, promocion) => {
         if (err) {
             res.status(500).send({message: `Error al consultar Promoción ${promocionId}`});            

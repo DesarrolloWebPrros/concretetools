@@ -22,8 +22,8 @@ export class EditProductoComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
-      const url:string = 'http://localhost:3768/api/producto/'+params["id"];
-      console.log(url);
+      const url:string = 'https://api-concretetools.herokuapp.com/api/producto/'+params["id"];
+      //console.log(url);
 
       this.ProductoObservable = this.Rest.get(url);
       this.ProductoObservable.subscribe( element =>{

@@ -52,7 +52,7 @@ export class CreateDistribuidorComponent implements OnInit {
 
     submit(){
       console.log(this.myForm.value);
-      this.Rest.post('http://localhost:3768/api/distribuidor', this.myForm.value)
+      this.Rest.post('https://api-concretetools.herokuapp.com/api/distribuidor', this.myForm.value)
 
         .subscribe(res => {
 
@@ -69,7 +69,7 @@ export class CreateDistribuidorComponent implements OnInit {
       // validar campos
 
       // enviar peticion a API
-      this.Rest.post('http://localhost:3768/api/distribuidor', form.value)
+      this.Rest.post('https://api-concretetools.herokuapp.com/api/distribuidor', form.value)
 
       .subscribe(res => {
 

@@ -47,7 +47,7 @@ export class CreatePromocionComponent implements OnInit {
 
   submit(){
     console.log(this.myForm.value);
-    this.Rest.post('http://localhost:3768/api/promocion', this.myForm.value)
+    this.Rest.post('https://api-concretetools.herokuapp.com/api/promocion', this.myForm.value)
 
       .subscribe(res => {
 
@@ -64,7 +64,7 @@ export class CreatePromocionComponent implements OnInit {
     // validar campos
 
     // enviar peticion a API
-    this.Rest.post('http://localhost:3768/api/promocion', form.value)
+    this.Rest.post('https://api-concretetools.herokuapp.com/api/promocion', form.value)
 
       .subscribe(res => {
 

@@ -18,9 +18,9 @@ export class ProductosComponent implements OnInit {
   }
 
   getProductos = () => {
-    this.Rest.get(`http://localhost:3768/api/productos`).subscribe((respuesta:any) => {
+    this.Rest.get(`https://api-concretetools.herokuapp.com/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
-      console.log(`Productos =>>>`,respuesta);
+      //console.log(`Productos =>>>`,respuesta);
     });    
   }
 

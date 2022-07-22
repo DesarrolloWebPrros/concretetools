@@ -17,7 +17,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   DistribuidoresFiltered : Distribuidor[]= [];
   isSearching:boolean = false;
 
-  URL:string = 'http://localhost:3768/api/distribuidor/'; 
+  URL:string = 'https://api-concretetools.herokuapp.com/api/distribuidor/'; 
 
   constructor(private Rest: RestService, private router: Router) { }
 
@@ -26,7 +26,7 @@ export class IndexDistribuidoresComponent implements OnInit {
   }
 
   getDistribuidores = () => {
-    this.Rest.get(`http://localhost:3768/api/distribuidores`).subscribe((respuesta:any) => {
+    this.Rest.get(`https://api-concretetools.herokuapp.com/api/distribuidores`).subscribe((respuesta:any) => {
       this.Distribuidores = respuesta.Distribuidores;
       this.DistribuidoresFiltered = respuesta.Distribuidores;
       console.log(`Distribuidores =>>>`,respuesta);

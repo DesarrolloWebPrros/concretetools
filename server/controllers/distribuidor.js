@@ -7,7 +7,7 @@ const index = (req, res) => {
         if (err) {
             res.status(500).send({message: 'Error al leer coleccion de Distribuidores'});
         } else {
-            console.log(distribuidores);
+            //console.log(distribuidores);
             if (!distribuidores) {
                 res.status(404).send({message: 'No se encontro ningun distribuidor'});
             } else {
@@ -19,12 +19,12 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     const distribuidorId = req.params.id;
-    console.log(distribuidorId);
+    //(distribuidorId);
     Distribuidor.findById(distribuidorId, (err, distribuidor) => {
         if (err) {
             res.status(500).send({message: `Error al consultar Distribuidor ${distribuidorId}`});            
         } else {
-            console.log(distribuidor);
+            //console.log(distribuidor);
             if (!distribuidor) {
                 res.status(404).send({message: 'No se encontro el distribuidor'});
             } else {
