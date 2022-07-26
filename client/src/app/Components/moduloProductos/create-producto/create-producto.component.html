@@ -19,6 +19,19 @@
         </div> -->
         <form class="form-group row" style="width: 80%;" #productoForm="ngForm" (ngSubmit)="guardar(productoForm)">
           <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Orden</span>
+            </div>
+            <input type="number" [ngModel]="Producto.Orden"
+                    name="Orden" class="form-control"
+                    step="0.01"
+                    min="0"
+                    #Orden="ngModel"
+                    [class.is-invalid]="Orden.invalid && Orden.touched"
+                    placeholder="Orden" aria-label="Orden"
+                    required minlength="1">
+          </div>
+          <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Nombre</span>
               </div>

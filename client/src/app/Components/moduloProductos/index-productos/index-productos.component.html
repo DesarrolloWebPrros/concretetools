@@ -20,6 +20,7 @@
           <table class="table table-hover" data-sticky-header="true">
               <thead class="thead-dark" >
                 <tr >
+                  <th scope="col">Orden</th>
                   <th scope="col">Clave</th>
                   <th scope="col">Nombre</th>
                   <th scope="col">Descripción</th>
@@ -31,6 +32,7 @@
                   <ng-container *ngIf="!isSearching">
                     <ng-container  *ngFor="let producto of Productos">
                         <tr>
+                          <th> {{ producto.Orden }} </th>
                           <th scope="row"> {{ producto.Clave }} </th>
                           <td>{{ producto.Nombre }}</td>
                           <td>{{ producto.Descripcion }}</td>
@@ -51,6 +53,7 @@
                   <ng-container *ngIf="isSearching">
                     <ng-container  *ngFor="let producto of ProductosFiltered">
                         <tr>
+                          <th> {{ producto.Orden }} </th>
                           <th scope="row"> {{ producto.Clave }} </th>
                           <td>{{ producto.Nombre }}</td>
                           <td>{{ producto.Descripcion }}</td>

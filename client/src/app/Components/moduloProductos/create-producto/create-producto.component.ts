@@ -11,6 +11,7 @@ import { Producto } from '../../interfaces/Prototipos';
 export class CreateProductoComponent implements OnInit {
 
   Producto:Producto={
+    Orden: 0,
     Nombre: '',
     Clave: '',
     Precio: 0,
@@ -22,6 +23,7 @@ export class CreateProductoComponent implements OnInit {
 
   myForm = new FormGroup({
 
+    Orden: new FormControl('', [Validators.required]),
     Nombre: new FormControl('', [Validators.required, Validators.minLength(5)]),
     Clave: new FormControl('', [Validators.required, Validators.minLength(3)]),
     Precio: new FormControl('', [Validators.required]),

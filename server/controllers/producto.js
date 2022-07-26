@@ -48,6 +48,7 @@ const save = (req, res) => {
     let producto = new Producto();
     const params = req.body;
 
+    producto.Orden = params.Orden;
     producto.Nombre = params.Nombre;
     producto.Clave = params.Clave;
     producto.Descripcion = params.Descripcion;

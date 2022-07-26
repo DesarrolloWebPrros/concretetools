@@ -11,12 +11,13 @@ export interface Promocion {
 
 export interface Producto {
     _id?:           string,
+    Orden:          number,
     Nombre:         string,
     Clave:          string,
     Descripcion:    string[] | string,
     Precio:         number,
     Aplicaciones:   string[] | string,
-    Imagen?:         string
+    Imagen?:        string
 }
 export interface Distribuidor {
     _id?:           string,

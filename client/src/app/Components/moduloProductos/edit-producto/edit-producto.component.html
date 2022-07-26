@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row" *ngIf="Producto">
         <a style="padding-bottom: 2%;" href="admin-productos">
-          <button class="btn btn-secondary">Volver</button>                  
+          <button class="btn btn-secondary">Volver</button>
         </a>
           <!-- <div class="input-group mb-3">
               <div class="input-group-prepend">
@@ -20,12 +20,18 @@
               </select>
           </div> -->
           <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Orden</span>
+            </div>
+            <input [(ngModel)]="Producto.Orden" type="text" class="form-control" aria-label="Orden">
+        </div>
+          <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Nombre</span>
               </div>
               <input [(ngModel)]="Producto.Nombre" type="text" class="form-control" aria-label="Nombre">
           </div>
-  
+
           <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Clave</span>
@@ -38,8 +44,8 @@
             </div>
             <ng-container *ngFor="let item of Producto.Descripcion; index as i;">
                 <input type="text" class="form-control"  [(ngModel)]="Producto.Descripcion[i]">
-            </ng-container>            
-            
+            </ng-container>
+
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -47,7 +53,7 @@
             </div>
             <ng-container *ngFor="let item of Producto.Aplicaciones; index as i;">
                 <input type="text" class="form-control"  [(ngModel)]="Producto.Aplicaciones[i]">
-            </ng-container>  
+            </ng-container>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -58,20 +64,19 @@
           <div class="input-group" *ngIf="showPhoto">
               <button class="btn btn-danger" (click)="eliminarFoto()">x</button>
               <img src="{{ 'assets/Productos/'+ Producto.Clave +'.jpg' }}" style="width: 35%; " alt="">
-              
+
             </div>
             <button *ngIf="!showPhoto" class="btn btn-success" (click)="eliminarFoto()"><i>Reestablecer imagen</i></button>
-          
-          <div class="input-group mb-3" *ngIf="!showPhoto">   
+
+          <div class="input-group mb-3" *ngIf="!showPhoto">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="validatedCustomFile" >
-              <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>            
-            </div>       
-            
+              <label class="custom-file-label" for="validatedCustomFile">Subir archivo...</label>
+            </div>
+
           </div>
           <div class="input-group mb-3">
             <input class="btn btn-secondary" type="submit" (click)="actualizarProducto()" value="Actualizar">
           </div>
       </div>
   </div>
-    
