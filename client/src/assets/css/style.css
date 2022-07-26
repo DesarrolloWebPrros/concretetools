@@ -3834,6 +3834,22 @@ input[type="button"].btn-block {
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
+.tarjeta-dist {
+  width: 360px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.tarjeta-dist:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 .card-body {
 
