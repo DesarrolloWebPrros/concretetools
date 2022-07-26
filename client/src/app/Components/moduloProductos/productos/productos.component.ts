@@ -21,7 +21,7 @@ export class ProductosComponent implements OnInit {
     this.Rest.get(`https://api-concretetools.herokuapp.com/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
       //console.log(`Productos =>>>`,respuesta);
-    });    
+    });
   }
 
   openProducto = (id:string) => {
