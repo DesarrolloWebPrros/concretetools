@@ -2,8 +2,19 @@
 
 let Producto = require('../models/producto');
 
-const index = (req, res) => {
-    Producto.find({}).exec( (err, productos) => {
+const index = async (req, res) => {
+    await Producto.find({}, null, {sort: {Orden: -1}}, function (err, productos) {
+        if (err) {
+            res.status(500).send({message: 'Error al leer coleccion de Productos'});
+        }
+        console.log(productos);
+        if (!productos) {
+            res.status(404).send({message: 'No se encontro ningun producto'});
+        } else {
+            res.status(200).send({Productos: productos.sort((a, b) => a.Orden - b.Orden)});
+        }
+    });
+    /* await Producto.find({}).exec( (err, productos) => {
         if (err) {
             res.status(500).send({message: 'Error al leer coleccion de Productos'});
         } else {
@@ -11,10 +22,10 @@ const index = (req, res) => {
             if (!productos) {
                 res.status(404).send({message: 'No se encontro ningun producto'});
             } else {
-                res.status(200).send({Productos: productos});
+                res.status(200).send({Productos: productos.sort((a, b) => a.Orden - b.Orden)});
             }
         }
-    })
+    }) */
 }
 
 const show = (req, res) => {

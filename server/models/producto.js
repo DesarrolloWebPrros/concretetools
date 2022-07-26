@@ -9,7 +9,8 @@ const ProductoSchema = Schema({
     Descripcion:    [String],
     Precio:         Number,
     Aplicaciones:   [String],
-    Imagen:         String
+    Imagen:         String,
+    Orden:          Number
 
 });
 
