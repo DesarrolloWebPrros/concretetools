@@ -3819,7 +3819,7 @@ input[type="button"].btn-block {
     border-bottom-left-radius: 0.25rem; }
 
 .tarjeta {
-  width: 430px;
+  width: 400px;
   height: 530px;
   border-radius: 8px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
@@ -3835,7 +3835,7 @@ input[type="button"].btn-block {
 }
 
 .tarjeta-dist {
-  width: 360px;
+  width: 260px;
   height: 300px;
   border-radius: 8px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
