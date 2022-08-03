@@ -7,13 +7,13 @@ const index = async (req, res) => {
         if (err) {
             res.status(500).send({message: 'Error al leer coleccion de Productos'});
         }
-        console.log(productos);
+        //console.log(productos);
         if (!productos) {
             res.status(404).send({message: 'No se encontro ningun producto'});
         } else {
             res.status(200).send({Productos: productos.sort((a, b) => a.Orden - b.Orden)});
         }
-    });
+    }).clone().catch(function(err){ console.log(err)});
     /* await Producto.find({}).exec( (err, productos) => {
         if (err) {
             res.status(500).send({message: 'Error al leer coleccion de Productos'});
