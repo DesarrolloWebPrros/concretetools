@@ -4,3 +4,12 @@
 @import "../../../../assets/css/magnific-popup.css";
 @import "../../../../assets/css/flaticon.css";
 @import "../../../../assets/css/style.css";
+
+.portada-desktop{
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 1900px;
+    width: auto;
+    background-image: url("../../../../assets/home/home_bg.jpg");
+}
