@@ -13,12 +13,12 @@ export class ProductosComponent implements OnInit {
 
   constructor(private Rest: RestService, private _router:Router) { }
 
-  ngOnInit(): void {
-    this.getProductos();
+  async ngOnInit(): Promise<void> {
+    await this.getProductos();
   }
 
-  getProductos = () => {
-    this.Rest.get(`https://api-concretetools.herokuapp.com/api/productos`).subscribe((respuesta:any) => {
+   getProductos = async() => {
+    await this.Rest.get(`https://api-concretetools.herokuapp.com/api/productos`).subscribe((respuesta:any) => {
       this.Productos = respuesta.Productos;
       //console.log(`Productos =>>>`,respuesta);
     });
