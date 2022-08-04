@@ -22,7 +22,7 @@
                 <img src="{{ 'assets/Productos/'+ producto.Clave +'.jpg' }}" class="rounded" style="width: 350px;" alt="{{ producto.Nombre }}">
               </div>
               <!--<h5 class="card-title text-dark">{{ producto.Clave }}</h5>-->
-              <h5 class="card-title text-dark">{{ producto.Precio | currency : 'MXN' : 'symbol-narrow' : '1.2-2'}}</h5>
+              <h5 class="card-title text-dark">{{ producto.Precio | currency : 'MXN' : 'symbol-narrow' : '1.2-2'}} <span>MX</span></h5>
               <p class="card-text">{{ producto.Descripcion }}.</p>
 
             </div>
