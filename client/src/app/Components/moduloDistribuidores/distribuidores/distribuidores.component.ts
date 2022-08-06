@@ -19,7 +19,7 @@ export class DistribuidoresComponent implements OnInit {
     setTimeout(() => {
       this.region = "CENTRO";
       this.filterByRegion();
-    }, 900);
+    }, 1000);
   }
 
   getDistribuidores = async() => {

@@ -4,6 +4,8 @@
     text-align: center;
     background-color: #fff;
     cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: bold;
 }
 .tarjeta-producto {
     padding: 16px;
